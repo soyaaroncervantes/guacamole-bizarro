@@ -93,6 +93,24 @@
     },
     {
       "path": "./projects/const/website/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/card/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/card/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/albums-facade/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/albums-facade/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/interfaces/album/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/interfaces/album/tsconfig.spec.json"
     }
 ]
 }

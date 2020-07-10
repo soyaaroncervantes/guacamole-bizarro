@@ -2,4 +2,4 @@
  * Public API Surface of album
  */
 
-export * from './lib/album.module';
+export * from './lib/albums-store.module';

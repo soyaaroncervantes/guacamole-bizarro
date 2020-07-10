@@ -1,0 +1,21 @@
+.albums {
+  height: calc( 100% - calc( 2vw + 64px ) );
+  margin: 1vw 4vw;
+
+  &__grid {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__title {
+    margin-top: 2vw;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__img {
+    width: 50%;
+  }
+}

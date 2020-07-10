@@ -12,8 +12,24 @@
 
   }
 
+  &__actions {
+    display: grid;
+    grid-row-gap: 1vw;
+    justify-items: center;
+  }
+
   &__button {
     padding: .3vw 3vw;
+
+    &__spotify {
+      background-color: #1DB954;
+      color: #fff;
+    }
+
+  }
+
+  &__img {
+    width: 100%;
   }
 
 }

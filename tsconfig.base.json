@@ -67,6 +67,18 @@
       "@const/website": [
         "dist/const/website/const-website",
         "dist/const/website"
+      ],
+      "@component/card": [
+        "dist/component/card/component-card",
+        "dist/component/card"
+      ],
+      "@services/albums-facade": [
+        "dist/services/albums-facade/services-albums-facade",
+        "dist/services/albums-facade"
+      ],
+      "@interfaces/album": [
+        "dist/interfaces/album/interfaces-album",
+        "dist/interfaces/album"
       ]
     }
   }
