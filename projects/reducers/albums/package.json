@@ -1,0 +1,18 @@
+{
+  "name": "@reducers/albums",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.2",
+    "@angular/core": "^10.0.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @reducers/albums --prod",
+    "watch": "ng build @reducers/albums --watch",
+    "test": "ng test @reducers/albums",
+    "lint": "ng lint @reducers/albums"
+  }
+}

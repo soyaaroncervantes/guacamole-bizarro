@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'">
+
+    <ng-content select=".sidenav__element"></ng-content>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar [color]="themePalette">
+      <ng-content select=".toolbar__element"></ng-content>
+    </mat-toolbar>
+
+    <!-- Add Content Here -->
+    <ng-content select=".content__element"></ng-content>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

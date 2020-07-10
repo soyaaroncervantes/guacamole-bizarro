@@ -1,0 +1,18 @@
+{
+  "name": "@actions/website",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.2",
+    "@angular/core": "^10.0.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @actions/website --prod",
+    "watch": "ng build @actions/website --watch",
+    "test": "ng test @actions/website",
+    "lint": "ng lint @actions/website"
+  }
+}

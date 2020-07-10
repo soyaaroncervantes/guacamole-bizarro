@@ -1,0 +1,21 @@
+{
+  "name": "@component/header",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.2",
+    "@angular/core": "^10.0.2",
+    "@angular/cdk": "^10.0.1",
+    "@angular/animations": "^10.0.2",
+    "@angular/material": "^10.0.1"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @component/header --prod",
+    "watch": "ng build @component/header --watch",
+    "test": "ng test @component/header",
+    "lint": "ng lint @component/header"
+  }
+}

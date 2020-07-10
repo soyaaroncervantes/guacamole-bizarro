@@ -1,0 +1,18 @@
+{
+  "name": "@store/album",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.2",
+    "@angular/core": "^10.0.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @store/albums --prod",
+    "watch": "ng build @store/albums --watch",
+    "test": "ng test @store/albums",
+    "lint": "ng lint @store/albums"
+  }
+}

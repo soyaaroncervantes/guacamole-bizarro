@@ -1,0 +1,19 @@
+.home {
+  height: calc( 100% - calc( 2vw + 64px ) );
+  margin: 1vw 4vw;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4vw;
+    align-items: center;
+
+    &__left { text-align: center; }
+
+  }
+
+  &__button {
+    padding: .3vw 3vw;
+  }
+
+}

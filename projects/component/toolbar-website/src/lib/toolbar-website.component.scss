@@ -1,0 +1,13 @@
+.toolbar {
+  align-items: center;
+  display: flex;
+
+  &__space {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    margin-left: 1.5vw;
+  }
+
+}
