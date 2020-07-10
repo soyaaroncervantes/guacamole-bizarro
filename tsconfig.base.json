@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -15,6 +14,60 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@component/header": [
+        "dist/component/header/component-header",
+        "dist/component/header"
+      ],
+      "@component/sidenav-website": [
+        "dist/component/sidenav-website/component-sidenav-website",
+        "dist/component/sidenav-website"
+      ],
+      "@component/toolbar-website": [
+        "dist/component/toolbar-website/component-toolbar-website",
+        "dist/component/toolbar-website"
+      ],
+      "@shared/header": [
+        "dist/shared/header/shared-header",
+        "dist/shared/header"
+      ],
+      "@store/website": [
+        "dist/store/website/store-website",
+        "dist/store/website"
+      ],
+      "@actions/website": [
+        "dist/actions/website/actions-website",
+        "dist/actions/website"
+      ],
+      "@reducers/website": [
+        "dist/reducers/website/reducers-website",
+        "dist/reducers/website"
+      ],
+      "@actions/albums": [
+        "dist/actions/albums/actions-albums",
+        "dist/actions/albums"
+      ],
+      "@reducers/albums": [
+        "dist/reducers/albums/reducers-albums",
+        "dist/reducers/albums"
+      ],
+      "@store/album": [
+        "dist/store/album/store-album",
+        "dist/store/album"
+      ],
+      "@routes/home": [
+        "dist/routes/home/routes-home",
+        "dist/routes/home"
+      ],
+      "@routes/albums": [
+        "dist/routes/albums/routes-albums",
+        "dist/routes/albums"
+      ],
+      "@const/website": [
+        "dist/const/website/const-website",
+        "dist/const/website"
+      ]
+    }
   }
 }

@@ -6,5 +6,93 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/@apps/website/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/@apps/website/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/@apps/website/e2e/tsconfig.json"
+    },
+    {
+      "path": "./projects/component/header/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/header/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/sidenav-website/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/sidenav-website/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/toolbar-website/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/toolbar-website/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared/header/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared/header/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/store/website/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/store/website/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/actions/website/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/actions/website/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/reducers/website/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/reducers/website/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/actions/albums/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/actions/albums/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/reducers/albums/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/reducers/albums/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/store/album/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/store/album/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/routes/home/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/routes/home/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/routes/albums/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/routes/albums/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/const/website/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/const/website/tsconfig.spec.json"
+    }
+]
 }

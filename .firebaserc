@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "albums-monorepo": {
+      "hosting": {
+        "@apps/website": [
+          "albums-monorepo"
+        ]
+      }
+    }
+  }
+}
