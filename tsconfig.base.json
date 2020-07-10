@@ -2,19 +2,17 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
     "lib": [
       "es2018",
       "dom"
     ],
+    "module": "es2020",
+    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
     "paths": {
       "@component/header": [
         "dist/component/header/component-header",
@@ -35,22 +33,6 @@
       "@store/website": [
         "dist/store/website/store-website",
         "dist/store/website"
-      ],
-      "@actions/website": [
-        "dist/actions/website/actions-website",
-        "dist/actions/website"
-      ],
-      "@reducers/website": [
-        "dist/reducers/website/reducers-website",
-        "dist/reducers/website"
-      ],
-      "@actions/albums": [
-        "dist/actions/albums/actions-albums",
-        "dist/actions/albums"
-      ],
-      "@reducers/albums": [
-        "dist/reducers/albums/reducers-albums",
-        "dist/reducers/albums"
       ],
       "@store/album": [
         "dist/store/album/store-album",
@@ -79,7 +61,17 @@
       "@interfaces/album": [
         "dist/interfaces/album/interfaces-album",
         "dist/interfaces/album"
+      ],
+      "@services/api-albums": [
+        "dist/services/api-albums/services-api-albums",
+        "dist/services/api-albums"
+      ],
+      "@effects/albums": [
+        "dist/effects/albums/effects-albums",
+        "dist/effects/albums"
       ]
-    }
+    },
+    "sourceMap": true,
+    "target": "es2015"
   }
 }

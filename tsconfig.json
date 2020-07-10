@@ -47,30 +47,6 @@
       "path": "./projects/store/website/tsconfig.spec.json"
     },
     {
-      "path": "./projects/actions/website/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/actions/website/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/reducers/website/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/reducers/website/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/actions/albums/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/actions/albums/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/reducers/albums/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/reducers/albums/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/store/album/tsconfig.lib.json"
     },
     {
@@ -111,6 +87,18 @@
     },
     {
       "path": "./projects/interfaces/album/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/api-albums/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/api-albums/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/effects/albums/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/effects/albums/tsconfig.spec.json"
     }
 ]
 }
