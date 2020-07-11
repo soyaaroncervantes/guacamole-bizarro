@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Album } from '@interfaces/album';
 
 @Component({
-  selector: 'lib-card',
-  template: `
-    <p>
-      card works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: 'component-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
 
+  @Input() album: Album;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
