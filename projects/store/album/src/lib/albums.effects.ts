@@ -4,9 +4,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as fromAlbums from './albums.actions';
 import { map, mergeMap, tap } from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AlbumsEffects {
 
   constructor(
@@ -17,10 +15,9 @@ export class AlbumsEffects {
   getAlbums$ = createEffect( () =>
     this.actions$.pipe(
       ofType( fromAlbums.getAlbums ),
-      mergeMap( x2 =>
-        this.apiAlbumsService.getAlbums()
+      mergeMap( () =>
+        this.apiAlbumsService.albums
           .pipe(
-            tap( x1 => console.log( 'Effects', x1 ) ),
             map( actions => actions.map( value => value.payload.doc.data() ) ),
             map( albums => fromAlbums.getAlbumsSuccess({ albums }) )
           )

@@ -17,10 +17,7 @@ export const initialState: State = {
 const scoreboardReducer = createReducer(
   initialState,
   on( albumsAction.getAlbumsSuccess,
-    ( state, actions) => {
-      console.log( actions );
-      return ({ ...state, albums: [ ...actions.albums ] });
-    }
+    ( state, actions) => ({ ...state, albums: [ ...actions.albums ] })
   ),
   on( albumsAction.addAlbumsSuccess,
     (( state, { album }) => ({ ...state, albums: [ { ...album }, ...state.albums ] })

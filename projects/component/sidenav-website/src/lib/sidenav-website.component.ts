@@ -12,6 +12,6 @@ export class SidenavWebsiteComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
 }

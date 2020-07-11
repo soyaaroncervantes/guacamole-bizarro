@@ -1,5 +1,5 @@
 export const websiteRoutes = {
-  id: ':id',
+  id: 'id',
   parent: '',
   children: {
     albums: 'albums'

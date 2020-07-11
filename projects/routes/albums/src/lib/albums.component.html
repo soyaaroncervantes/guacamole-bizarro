@@ -3,4 +3,9 @@
     <img src="/assets/undraw__walker.svg" alt="Walker Undraw" class="[ albums__img ]">
     <h1 class="[ albums__title ] [ mat-headline mat-display-1 ]">Our Recent Albums</h1>
   </div>
+  <div class="[ albums__content ]">
+    <div class="[ container__card ]" *ngFor="let album of albums$ | async">
+      <component-card [album]="album"></component-card>
+    </div>
+  </div>
 </main>

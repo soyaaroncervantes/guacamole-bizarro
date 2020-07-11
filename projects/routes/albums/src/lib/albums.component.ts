@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AlbumsFacadeService } from '@services/albums-facade';
+import { Observable } from 'rxjs';
+import { Album } from '@interfaces/album';
+import { pluck } from 'rxjs/operators';
 
 @Component({
   selector: 'lib-albums',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsComponent implements OnInit {
 
-  constructor() { }
+  albums$: Observable<Album[]>;
+
+  constructor(
+    private albumsFacadeService: AlbumsFacadeService
+  ) {
+    this.albums$ = albumsFacadeService.albums$.pipe( pluck( 'albums' ) );
+  }
 
   ngOnInit(): void {
+    this.albumsFacadeService.get();
   }
 
 }

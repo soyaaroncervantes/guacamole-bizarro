@@ -15,8 +15,8 @@ export class ApiAlbumsService {
     this.albumsCollection = this.angularFirestore.collection<Album>('albums');
   }
 
-  getAlbums(): Observable<DocumentChangeAction<Album>[]>{
-    return this.albumsCollection.stateChanges().pipe( tap( console.log ) );
+  get albums(): Observable<DocumentChangeAction<Album>[]>{
+    return this.albumsCollection.stateChanges();
   }
 
   addAlbum( album: Album ): Observable<Album> {

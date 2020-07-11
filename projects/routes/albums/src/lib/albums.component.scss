@@ -1,10 +1,8 @@
 .albums {
-  height: calc( 100% - calc( 2vw + 64px ) );
   margin: 1vw 4vw;
 
   &__grid {
     display: grid;
-    justify-items: center;
   }
 
   &__title {
@@ -12,10 +10,21 @@
   }
 
   &__header {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+
     text-align: center;
   }
 
   &__img {
     width: 50%;
   }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1vw;
+  }
+
 }

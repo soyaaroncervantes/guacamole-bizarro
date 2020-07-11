@@ -7,5 +7,12 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @services/albums-facade --prod",
+    "watch": "ng build @services/albums-facade --watch",
+    "test": "ng test @services/albums-facade",
+    "lint": "ng lint @services/albums-facade"
   }
 }
