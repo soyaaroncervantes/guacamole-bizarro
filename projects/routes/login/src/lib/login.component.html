@@ -1,0 +1,12 @@
+<main class="[ login login__grid ]">
+  <div class="login__left">
+    <h2 class="[ mat-display-1 mat-title ] [ login__title ]">Ingresar</h2>
+    <form class="[ login__form ] [ form ]" [formGroup]="formGroup" (ngSubmit)="submit( formGroup.value )">
+      <component-account-form [formGroup]="formGroup"></component-account-form>
+    </form>
+    <a mat-raised-button color="secondary" class="[ button button__secondary ]" [routerLink]="[ '/', routes.children.login ]">Crear Cuenta</a>
+  </div>
+  <div class="login__right">
+    <img src="/assets/undraw_stand_out.svg" alt="Stand Out" class="[ login__img ]">
+  </div>
+</main>

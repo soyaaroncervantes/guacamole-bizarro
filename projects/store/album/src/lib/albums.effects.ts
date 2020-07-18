@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ApiAlbumsService } from '@services/api-albums';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as fromAlbums from './albums.actions';
-import { map, mergeMap, tap } from 'rxjs/operators';
+import { map, mergeMap } from 'rxjs/operators';
 
 @Injectable()
 export class AlbumsEffects {

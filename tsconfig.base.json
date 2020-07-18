@@ -69,6 +69,50 @@
       "@effects/albums": [
         "dist/effects/albums/effects-albums",
         "dist/effects/albums"
+      ],
+      "@routes/login": [
+        "dist/routes/login/routes-login",
+        "dist/routes/login"
+      ],
+      "@interfaces/user": [
+        "dist/interfaces/user/interfaces-user",
+        "dist/interfaces/user"
+      ],
+      "@services/api-login": [
+        "dist/services/api-login/services-api-login",
+        "dist/services/api-login"
+      ],
+      "@services/api-create-user": [
+        "dist/services/api-create-user/services-api-create-user",
+        "dist/services/api-create-user"
+      ],
+      "@services/facade-create-user": [
+        "dist/services/facade-create-user/services-facade-create-user",
+        "dist/services/facade-create-user"
+      ],
+      "@services/facade-login": [
+        "dist/services/facade-login/services-facade-login",
+        "dist/services/facade-login"
+      ],
+      "@routes/signin": [
+        "dist/routes/signin/routes-signin",
+        "dist/routes/signin"
+      ],
+      "@component/account-form": [
+        "dist/component/account-form/component-account-form",
+        "dist/component/account-form"
+      ],
+      "@actions/user": [
+        "dist/actions/user/actions-user",
+        "dist/actions/user"
+      ],
+      "@effects/user": [
+        "dist/effects/user/effects-user",
+        "dist/effects/user"
+      ],
+      "@reducers/user": [
+        "dist/reducers/user/reducers-user",
+        "dist/reducers/user"
       ]
     },
     "sourceMap": true,

@@ -99,6 +99,72 @@
     },
     {
       "path": "./projects/effects/albums/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/routes/login/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/routes/login/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/interfaces/user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/interfaces/user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/api-login/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/api-login/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/api-create-user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/api-create-user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/facade-create-user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/facade-create-user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/facade-login/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/facade-login/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/routes/signin/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/routes/signin/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/account-form/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/account-form/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/actions/user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/actions/user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/effects/user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/effects/user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/reducers/user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/reducers/user/tsconfig.spec.json"
     }
 ]
 }

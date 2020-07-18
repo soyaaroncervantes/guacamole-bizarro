@@ -1,0 +1,18 @@
+{
+  "name": "@routes/login",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.2",
+    "@angular/core": "^10.0.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @routes/login --prod",
+    "watch": "ng build @routes/login --watch",
+    "test": "ng test @routes/login",
+    "lint": "ng lint @routes/login"
+  }
+}

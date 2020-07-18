@@ -1,0 +1,12 @@
+.element {
+
+  &__login {
+    display: none;
+
+    @media only screen and ( max-width: 470px ) {
+      display: block;
+    }
+
+  }
+
+}

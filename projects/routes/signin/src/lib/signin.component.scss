@@ -1,0 +1,47 @@
+.signin {
+  margin: 1vw 4vw;
+  height: calc( 100% - calc( 2vw + 64px ) );
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-content: center;
+  }
+
+  &__right {
+    display: grid;
+    align-content: center;
+  }
+
+  &__form{
+    display: grid;
+    margin: 0 9vw;
+    row-gap: 1vw;
+
+    @media only screen and ( max-width: 1100px ) {
+      margin: 0 5vw;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+}
+
+.button {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+
+  &__secondary {
+    margin-top: 1vw;
+    background-color: #178feb;
+    color: #ffffff;
+  }
+}

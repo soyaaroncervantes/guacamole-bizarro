@@ -10,4 +10,25 @@
     margin-left: 1.5vw;
   }
 
+  &__button {
+
+    &__login {
+      width: min-content;
+      margin-right: 2vw;
+    }
+
+  }
+
+}
+
+.button {
+
+  @media only screen and ( max-width: 470px ) {
+    display: none;
+  }
+
+  &__text {
+    margin-left: 1vw;
+  }
+
 }
