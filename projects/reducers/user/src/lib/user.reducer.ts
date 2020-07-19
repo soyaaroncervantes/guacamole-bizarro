@@ -1,9 +1,9 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import * as userAction from '@actions/user';
-import * as firebase from 'firebase';
+import { UserCredential } from '@firebase/auth-types';
 
 export interface State {
-  user: firebase.User;
+  user: UserCredential;
 }
 
 export const userFeatureKey = 'user';
@@ -14,7 +14,10 @@ export const initialState: State = {
 
 const userReducer = createReducer(
   initialState,
-  on( userAction.userSuccess, ( state, { user } ) => ( { ...state, user: {...user} } ) )
+  on( userAction.userSuccess, ( state, { userCredential } ) => {
+    console.log( '[Reducer] ', userCredential );
+    return { ...state, user: userCredential };
+  })
 );
 
 export function reducer(state: State | undefined, action: Action ): State {

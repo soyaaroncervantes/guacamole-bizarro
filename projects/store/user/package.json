@@ -1,9 +1,9 @@
 {
-  "name": "@store/album",
+  "name": "@store/user",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^10.0.2",
-    "@angular/core": "^10.0.2",
+    "@angular/common": "^10.0.4",
+    "@angular/core": "^10.0.4",
     "@ngrx/store": "^9.2.0"
   },
   "dependencies": {

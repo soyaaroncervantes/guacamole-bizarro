@@ -165,6 +165,12 @@
     },
     {
       "path": "./projects/reducers/user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/store/user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/store/user/tsconfig.spec.json"
     }
 ]
 }

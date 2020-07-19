@@ -11,7 +11,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "ng build @actions/user --prod",
+    "build": "ng build @actions/user",
     "watch": "ng build @actions/user --watch",
     "test": "ng test @actions/user",
     "lint": "ng lint @actions/user"

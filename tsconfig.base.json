@@ -113,6 +113,10 @@
       "@reducers/user": [
         "dist/reducers/user/reducers-user",
         "dist/reducers/user"
+      ],
+      "@store/user": [
+        "dist/store/user/store-user",
+        "dist/store/user"
       ]
     },
     "sourceMap": true,

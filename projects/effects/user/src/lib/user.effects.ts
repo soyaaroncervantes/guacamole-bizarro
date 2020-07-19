@@ -5,8 +5,8 @@ import { ApiLoginService } from '@services/api-login';
 import { ApiCreateUserService } from '@services/api-create-user';
 
 import * as fromAction from '@actions/user';
-import { catchError, map, mergeMap, pluck, tap } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
+import { catchError, map, mergeMap, tap } from 'rxjs/operators';
+import { from, of } from 'rxjs';
 
 @Injectable()
 export class UserEffects {
@@ -21,10 +21,14 @@ export class UserEffects {
     this.actions$.pipe(
       ofType( fromAction.createUser ),
       mergeMap( ({ user }) =>
-        this.apiCreateUserService.createUser( user )
+        from( this.apiCreateUserService.createUser( user ) )
           .pipe(
-            pluck( 'user' ),
-            map( firebaseUser => fromAction.userSuccess({ user: firebaseUser }) )
+            tap( console.log ),
+            map( userCredential => fromAction.userSuccess({ userCredential }) ),
+            catchError( errors => {
+              console.error( errors );
+              return of( fromAction.userFailure({ errors }) );
+            })
           )
       )
     )
@@ -33,11 +37,10 @@ export class UserEffects {
   loginUser$ = createEffect( () =>
     this.actions$.pipe(
       ofType( fromAction.login ),
-      mergeMap( action =>
-      this.apiLoginService.loginUser( action.user )
+      mergeMap( ({ user }) =>
+      this.apiLoginService.loginUser( user )
         .pipe(
-          pluck( 'user' ),
-          map( user => fromAction.userSuccess({ user }) )
+          map( userCredential => fromAction.userSuccess({ userCredential }) )
         )
       )
     )

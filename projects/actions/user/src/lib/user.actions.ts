@@ -1,7 +1,8 @@
 import { createAction, props } from '@ngrx/store';
-import * as firebase from 'firebase';
 import { User } from '@interfaces/user';
+import { UserCredential } from '@firebase/auth-types';
 
-export const login = createAction( '[ API/Albums ] Login User', props<{ user: User }>() );
-export const createUser = createAction( '[ API/Albums ] Login User', props<{ user: User }>() );
-export const userSuccess = createAction( '[ API/Albums ] Create User', props<{ user: firebase.User }>() );
+export const login = createAction( '[ API/User ] Login User', props<{ user: User }>() );
+export const createUser = createAction( '[ API/User ] Create User', props<{ user: User }>() );
+export const userSuccess = createAction( '[ API/User ] User Success', props<{ userCredential: UserCredential }>() );
+export const userFailure = createAction( '[ API/User ] User Failure', props<{ errors: any }>() );

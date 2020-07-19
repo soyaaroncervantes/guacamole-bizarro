@@ -26,6 +26,7 @@
               "@firebase/component",
               "@firebase/firestore",
               "@firebase/util",
+              "@firebase/auth",
               "firebase/app"
             ],
             "outputPath": "dist/@apps/website",
@@ -1131,6 +1132,46 @@
             "tsConfig": [
               "projects/reducers/user/tsconfig.lib.json",
               "projects/reducers/user/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@store/user": {
+      "projectType": "library",
+      "root": "projects/store/user",
+      "sourceRoot": "projects/store/user/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/store/user/tsconfig.lib.json",
+            "project": "projects/store/user/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/store/user/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/store/user/src/test.ts",
+            "tsConfig": "projects/store/user/tsconfig.spec.json",
+            "karmaConfig": "projects/store/user/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/store/user/tsconfig.lib.json",
+              "projects/store/user/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

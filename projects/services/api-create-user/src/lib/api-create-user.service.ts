@@ -14,9 +14,9 @@ export class ApiCreateUserService {
     private angularFireAuth: AngularFireAuth
   ) { }
 
-  createUser( user: User ): Observable<UserCredential> {
+  async createUser( user: User ): Promise<UserCredential> {
     console.log('[API] Create User ', user);
-    return from( this.angularFireAuth.createUserWithEmailAndPassword( user.email, user.password ) );
+    return await this.angularFireAuth.createUserWithEmailAndPassword( user.email, user.password );
   }
 
 }
