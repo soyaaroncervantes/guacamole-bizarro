@@ -10,7 +10,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "ng build @routes/login --prod",
+    "build": "ng build @routes/login",
     "watch": "ng build @routes/login --watch",
     "test": "ng test @routes/login",
     "lint": "ng lint @routes/login"

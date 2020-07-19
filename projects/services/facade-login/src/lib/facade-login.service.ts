@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
 import { User } from '@interfaces/user';
 import { Store } from '@ngrx/store';
-import * as fromUserReducer from '@reducers/user';
-import * as fromUserAction from '@actions/user';
+import * as fromUser from '@store/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FacadeLoginService {
 
-  constructor( private store: Store<fromUserReducer.State> ) { }
+  constructor( private store: Store<fromUser.State> ) { }
 
   login( user: User ): void {
-    this.store.dispatch( fromUserAction.login({ user }) );
+    this.store.dispatch( fromUser.login({ user }) );
   }
 
 }

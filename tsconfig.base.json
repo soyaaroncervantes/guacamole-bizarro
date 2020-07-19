@@ -102,18 +102,6 @@
         "dist/component/account-form/component-account-form",
         "dist/component/account-form"
       ],
-      "@actions/user": [
-        "dist/actions/user/actions-user",
-        "dist/actions/user"
-      ],
-      "@effects/user": [
-        "dist/effects/user/effects-user",
-        "dist/effects/user"
-      ],
-      "@reducers/user": [
-        "dist/reducers/user/reducers-user",
-        "dist/reducers/user"
-      ],
       "@store/user": [
         "dist/store/user/store-user",
         "dist/store/user"

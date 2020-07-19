@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 
+import { UserStoreModule } from '@store/user';
+
 import { FacadeLoginService } from '@services/facade-login';
 
 import { AccountFormModule } from '@component/account-form';
@@ -19,7 +21,8 @@ import { LoginComponent } from './login.component';
     CommonModule,
     LoginRoutingModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    UserStoreModule
   ],
   providers: [
     FacadeLoginService

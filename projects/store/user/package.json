@@ -11,9 +11,9 @@
   },
   "private": true,
   "scripts": {
-    "build": "ng build @store/album",
-    "watch": "ng build @store/album --watch",
-    "test": "ng test @store/album",
-    "lint": "ng lint @store/album"
+    "build": "ng build @store/user",
+    "watch": "ng build @store/user --watch",
+    "test": "ng test @store/user",
+    "lint": "ng lint @store/user"
   }
 }

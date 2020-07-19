@@ -149,24 +149,6 @@
       "path": "./projects/component/account-form/tsconfig.spec.json"
     },
     {
-      "path": "./projects/actions/user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/actions/user/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/effects/user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/effects/user/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/reducers/user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/reducers/user/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/store/user/tsconfig.lib.json"
     },
     {

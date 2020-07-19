@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 import { User } from '@interfaces/user';
 import { Store } from '@ngrx/store';
-import * as fromUserReducer from '@reducers/user';
-import * as fromUserAction from '@actions/user';
+import * as fromUser from '@store/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FacadeCreateUserService {
 
-  constructor( private store: Store<fromUserReducer.State> ) { }
+  constructor( private store: Store<fromUser.State> ) { }
 
   create( user: User ): void {
     console.log( '[FACADE] Create User', user );
-    this.store.dispatch( fromUserAction.createUser({ user }) );
+    this.store.dispatch( fromUser.createUser({ user }) );
   }
 
 }
