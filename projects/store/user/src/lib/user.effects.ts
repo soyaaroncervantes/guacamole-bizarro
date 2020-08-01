@@ -25,9 +25,10 @@ export class UserEffects {
       mergeMap( ({ user }) =>
         this.apiCreateUserService.createUser( user )
           .pipe(
-            map( ( userCredential ) => fromAction.userSuccess({ userCredential }) ),
+            map( userCredential =>
+              fromAction.userSuccess({ userCredential: {...userCredential} })
+            ),
             catchError( errors => {
-              console.error( errors );
               return of( fromAction.userFailure({ errors }) );
             })
           )
