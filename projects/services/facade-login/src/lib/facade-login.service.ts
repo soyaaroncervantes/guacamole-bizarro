@@ -8,7 +8,9 @@ import * as fromUser from '@store/user';
 })
 export class FacadeLoginService {
 
-  constructor( private store: Store<fromUser.State> ) { }
+  constructor(
+    private store: Store<fromUser.State>,
+  ) { }
 
   login( user: User ): void {
     this.store.dispatch( fromUser.login({ user }) );
