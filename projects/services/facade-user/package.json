@@ -7,5 +7,12 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @services/facade-user",
+    "watch": "ng build @services/facade-user --watch",
+    "test": "ng test @services/facade-user",
+    "lint": "ng lint @services/facade-user"
   }
 }
