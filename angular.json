@@ -1059,6 +1059,86 @@
           }
         }
       }
+    },
+    "@component/rolling-svg": {
+      "projectType": "library",
+      "root": "projects/component/rolling-svg",
+      "sourceRoot": "projects/component/rolling-svg/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/component/rolling-svg/tsconfig.lib.json",
+            "project": "projects/component/rolling-svg/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/component/rolling-svg/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/component/rolling-svg/src/test.ts",
+            "tsConfig": "projects/component/rolling-svg/tsconfig.spec.json",
+            "karmaConfig": "projects/component/rolling-svg/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/component/rolling-svg/tsconfig.lib.json",
+              "projects/component/rolling-svg/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@services/facade-user": {
+      "projectType": "library",
+      "root": "projects/services/facade-user",
+      "sourceRoot": "projects/services/facade-user/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/services/facade-user/tsconfig.lib.json",
+            "project": "projects/services/facade-user/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/services/facade-user/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/services/facade-user/src/test.ts",
+            "tsConfig": "projects/services/facade-user/tsconfig.spec.json",
+            "karmaConfig": "projects/services/facade-user/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/services/facade-user/tsconfig.lib.json",
+              "projects/services/facade-user/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "@apps/website"

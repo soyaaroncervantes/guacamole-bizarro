@@ -105,6 +105,14 @@
       "@store/user": [
         "dist/store/user/store-user",
         "dist/store/user"
+      ],
+      "@component/rolling-svg": [
+        "dist/component/rolling-svg/component-rolling-svg",
+        "dist/component/rolling-svg"
+      ],
+      "@services/facade-user": [
+        "dist/services/facade-user/services-facade-user",
+        "dist/services/facade-user"
       ]
     },
     "sourceMap": true,

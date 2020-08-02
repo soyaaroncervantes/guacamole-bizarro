@@ -153,6 +153,18 @@
     },
     {
       "path": "./projects/store/user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/rolling-svg/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/rolling-svg/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/facade-user/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/facade-user/tsconfig.spec.json"
     }
 ]
 }
