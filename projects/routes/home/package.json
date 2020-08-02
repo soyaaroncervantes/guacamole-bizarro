@@ -13,7 +13,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "ng build @routes/home --prod",
+    "build": "ng build @routes/home",
     "watch": "ng build @routes/home --watch",
     "test": "ng test @routes/home",
     "lint": "ng lint @routes/home"
