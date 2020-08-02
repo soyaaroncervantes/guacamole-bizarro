@@ -14,7 +14,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "ng build @component/toolbar-website --prod",
+    "build": "ng build @component/toolbar-website",
     "watch": "ng build @component/toolbar-website --watch",
     "test": "ng test @component/toolbar-website",
     "lint": "ng lint @component/toolbar-website"

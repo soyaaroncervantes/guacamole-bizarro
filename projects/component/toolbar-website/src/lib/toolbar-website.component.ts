@@ -1,7 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Observable } from 'rxjs';
+
+import { FacadeUserService } from '@services/facade-user';
+
+import { UserInfo } from '@firebase/auth-types';
+
 import { websiteRoutes } from '@const/website';
+
+import { Observable } from 'rxjs';
+import { pluck } from 'rxjs/operators';
 
 @Component({
   selector: 'toolbar-website',
@@ -17,12 +24,19 @@ export class ToolbarWebsiteComponent implements OnInit {
   @Output() isHandset$Change: EventEmitter<Observable<boolean>>;
 
   routes = websiteRoutes;
+  userInfo$: Observable<UserInfo>;
 
-  constructor() {
+  constructor(
+    private facadeUserService: FacadeUserService
+  ) {
     this.matSidenavChange = new EventEmitter<MatSidenav>();
     this.isHandset$Change = new EventEmitter<Observable<boolean>>();
+    this.userInfo$ = this.facadeUserService.user;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.facadeUserService.get();
+    this.userInfo$.subscribe( console.log );
+  }
 
 }
