@@ -14,11 +14,8 @@ export const initialState: State = {
 
 const userReducer = createReducer(
   initialState,
-  on( userAction.userSuccess,
-    (( state, { userInfo }) => {
-      return ({ ...state, user: { ...userInfo } });
-    })
-  )
+  on( userAction.getUser, ( state => ({ ...state }) ) ),
+  on( userAction.userSuccess, (( state, { userInfo }) => ({ ...state, user: { ...userInfo } }) ) )
 );
 
 export function reducer(state: State | undefined, action: Action ): State {
