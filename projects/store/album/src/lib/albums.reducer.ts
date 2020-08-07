@@ -1,5 +1,5 @@
 import { Album } from '@interfaces/album';
-import { Action, createReducer, on } from '@ngrx/store';
+import { Action, createFeatureSelector, createReducer, createSelector, on } from '@ngrx/store';
 import * as albumsAction from './albums.actions';
 
 export interface State {
@@ -32,6 +32,11 @@ const scoreboardReducer = createReducer(
       })
     )),
 );
+
+const featureAlbumSelector = createFeatureSelector<State>(albumsFeatureKey);
+
+export const getAlbumData = createSelector( featureAlbumSelector, ( state ) => state.album );
+export const getAlbumsData = createSelector( featureAlbumSelector, ( state ) => state.albums );
 
 export function reducer(state: State | undefined, action: Action ): State {
   return scoreboardReducer( state, action );

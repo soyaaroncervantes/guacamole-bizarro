@@ -165,6 +165,12 @@
     },
     {
       "path": "./projects/services/facade-user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/button-access/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/button-access/tsconfig.spec.json"
     }
 ]
 }

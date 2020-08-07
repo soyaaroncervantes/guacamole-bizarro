@@ -30,9 +30,11 @@ export class UserEffects {
       mergeMap( ({ user }) =>
         this.apiCreateUserService.createUser( user )
           .pipe(
-            pluck<UserCredential, UserInfo[]>( 'user', 'providerData' ),
-            map<UserInfo[], UserInfo>(value => value.shift() ),
-            map( ( userInfo ) => fromAction.userSuccess({ userInfo }) ),
+            pluck( 'user' ),
+            map( ( { uid, displayName, phoneNumber, photoURL, email } ) => {
+              return { uid, displayName, phoneNumber, photoURL, email };
+            }),
+            map( ( userInfo: UserInfo ) => fromAction.userSuccess({ userInfo }) ),
             tap( () => this.router.navigate([ websiteRoutes.parent, websiteRoutes.children.albums ]) ),
             catchError( errors => of( fromAction.userFailure({ errors }) ) )
           )
@@ -46,9 +48,11 @@ export class UserEffects {
       mergeMap( ({ user }) =>
         this.apiLoginService.loginUser( user )
           .pipe(
-            pluck<UserCredential, UserInfo[]>( 'user', 'providerData' ),
-            map<UserInfo[], UserInfo>(value => value.shift() ),
-            map( ( userInfo ) => fromAction.userSuccess({ userInfo }) ),
+            pluck( 'user' ),
+            map( ( { uid, displayName, phoneNumber, photoURL, email } ) => {
+              return { uid, displayName, phoneNumber, photoURL, email };
+            }),
+            map( ( userInfo: UserInfo ) => fromAction.userSuccess({ userInfo }) ),
             tap( () => this.router.navigate([ websiteRoutes.parent, websiteRoutes.children.albums ]) ),
             catchError( errors => of( fromAction.userFailure({ errors }) ) )
           )

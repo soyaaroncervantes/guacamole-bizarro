@@ -113,6 +113,10 @@
       "@services/facade-user": [
         "dist/services/facade-user/services-facade-user",
         "dist/services/facade-user"
+      ],
+      "@component/button-access": [
+        "dist/component/button-access/component-button-access",
+        "dist/component/button-access"
       ]
     },
     "sourceMap": true,

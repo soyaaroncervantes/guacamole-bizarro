@@ -6,6 +6,7 @@ import { AlbumsComponent } from './albums.component';
 import { AlbumsStoreModule } from '@store/album';
 import { AlbumsFacadeService } from '@services/albums-facade';
 import { CardModule } from '@component/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardModule } from '@component/card';
     CommonModule,
     AlbumsRoutingModule,
     AlbumsStoreModule,
-    CardModule
+    CardModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     AlbumsFacadeService

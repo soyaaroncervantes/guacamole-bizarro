@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as fromAlbums from '@store/album';
+
 import { Observable } from 'rxjs';
+
 import { Album } from '@interfaces/album';
+
+import * as fromAlbums from '@store/album';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +17,10 @@ export class AlbumsFacadeService {
   ) {}
 
   get albums$(): Observable<Album[]> {
-    return this.store.select( 'albums' );
+    return this.store.select( fromAlbums.getAlbumsData );
   }
 
-  get(): void {
+  dispatchAlbums(): void {
     this.store.dispatch( fromAlbums.getAlbums() );
   }
 

@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 
-import { UserInfo } from '@firebase/auth-types';
-
 import { Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs';
 
 import * as fromUser from '@store/user';
+import { UserInfo } from '@firebase/auth-types';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +13,14 @@ import * as fromUser from '@store/user';
 export class FacadeUserService {
 
   constructor(
-    private store: Store<fromUser.State>,
+    private store: Store,
   ) { }
 
-  get user(): Observable<UserInfo> {
-    return this.store.select( 'user' );
+  get info(): Observable<UserInfo> {
+    return this.store.select( fromUser.getInfo );
   }
 
-  get(): void {
+  dispatchUser(): void {
     this.store.dispatch( fromUser.getUser() );
   }
 }

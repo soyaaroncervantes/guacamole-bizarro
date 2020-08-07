@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
+import { ButtonAccessModule } from '@component/button-access';
 
 @NgModule({
   declarations: [ToolbarWebsiteComponent],
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    ButtonAccessModule
   ],
   exports: [ToolbarWebsiteComponent]
 })

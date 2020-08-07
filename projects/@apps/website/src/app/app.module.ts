@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppFirebaseModule } from './app-firebase.module';
 import { environment } from '../environments/environment';
+import { UserStoreModule } from '@store/user';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { environment } from '../environments/environment';
     SidenavWebsiteModule,
     ToolbarWebsiteModule,
     WebsiteStoreModule,
+    UserStoreModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
