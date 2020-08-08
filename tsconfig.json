@@ -77,12 +77,6 @@
       "path": "./projects/component/card/tsconfig.spec.json"
     },
     {
-      "path": "./projects/services/albums-facade/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/services/albums-facade/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/interfaces/album/tsconfig.lib.json"
     },
     {
@@ -171,6 +165,12 @@
     },
     {
       "path": "./projects/component/button-access/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/facade-albums/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/facade-albums/tsconfig.spec.json"
     }
 ]
 }

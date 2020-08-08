@@ -54,10 +54,6 @@
         "dist/component/card/component-card",
         "dist/component/card"
       ],
-      "@services/albums-facade": [
-        "dist/services/albums-facade/services-albums-facade",
-        "dist/services/albums-facade"
-      ],
       "@interfaces/album": [
         "dist/interfaces/album/interfaces-album",
         "dist/interfaces/album"
@@ -117,6 +113,10 @@
       "@component/button-access": [
         "dist/component/button-access/component-button-access",
         "dist/component/button-access"
+      ],
+      "@services/facade-albums": [
+        "dist/services/facade-albums/services-facade-albums",
+        "dist/services/facade-albums"
       ]
     },
     "sourceMap": true,

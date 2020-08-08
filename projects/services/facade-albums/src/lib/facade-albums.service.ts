@@ -1,16 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-
+import * as fromAlbums from '@store/album';
 import { Observable } from 'rxjs';
-
 import { Album } from '@interfaces/album';
 
-import * as fromAlbums from '@store/album';
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'platform'
 })
-export class AlbumsFacadeService {
+export class FacadeAlbumsService {
 
   constructor(
     private store: Store<fromAlbums.State>,

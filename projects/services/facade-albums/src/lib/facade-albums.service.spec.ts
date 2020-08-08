@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AlbumsFacadeService } from './albums-facade.service';
+import { FacadeAlbumsService } from './facade-albums.service';
 
-describe('AlbumsFacadeService', () => {
-  let service: AlbumsFacadeService;
+describe('FacadeAlbumsService', () => {
+  let service: FacadeAlbumsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AlbumsFacadeService);
+    service = TestBed.inject(FacadeAlbumsService);
   });
 
   it('should be created', () => {
