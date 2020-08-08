@@ -11,7 +11,6 @@ export class FacadeCreateUserService {
   constructor( private store: Store<fromUser.State> ) { }
 
   create( user: User ): void {
-    console.log( '[FACADE] Create User', user );
     this.store.dispatch( fromUser.createUser({ user }) );
   }
 

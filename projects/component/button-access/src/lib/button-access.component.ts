@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserInfo } from '@firebase/auth-types';
 import { websiteRoutes } from '@const/website';
+import { FacadeUserService } from '@services/facade-user';
 
 @Component({
   selector: 'lib-button-access',
@@ -13,9 +14,14 @@ export class ButtonAccessComponent implements OnInit {
 
   routes = websiteRoutes;
 
-  constructor() { }
+  constructor(
+    private facadeUserService: FacadeUserService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  logout(): void {
+    this.facadeUserService.dispatchLogout();
   }
 
 }

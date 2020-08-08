@@ -20,6 +20,10 @@ export class FacadeUserService {
     return this.store.select( fromUser.getInfo );
   }
 
+  dispatchLogout(): void {
+    this.store.dispatch( fromUser.logout() );
+  }
+
   dispatchUser(): void {
     this.store.dispatch( fromUser.getUser() );
   }

@@ -15,7 +15,6 @@ export class ApiCreateUserService {
   ) { }
 
   createUser( user: User ): Observable<UserCredential> {
-    console.log('[API] Create User ', user);
     return from( this.angularFireAuth.createUserWithEmailAndPassword( user.email, user.password ) );
   }
 

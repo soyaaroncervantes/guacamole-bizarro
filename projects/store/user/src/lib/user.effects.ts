@@ -60,4 +60,16 @@ export class UserEffects {
     )
   );
 
+  logout$ = createEffect( () =>
+    this.actions$.pipe(
+      ofType( fromAction.logout ),
+      mergeMap( () =>
+        this.apiLoginService.logout()
+          .pipe(
+            map( () => fromAction.logoutSuccess() )
+          )
+      )
+    )
+  );
+
 }
