@@ -171,6 +171,12 @@
     },
     {
       "path": "./projects/services/facade-albums/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/services/notifications/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/services/notifications/tsconfig.spec.json"
     }
 ]
 }

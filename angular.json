@@ -1179,6 +1179,46 @@
           }
         }
       }
+    },
+    "@services/notifications": {
+      "projectType": "library",
+      "root": "projects/services/notifications",
+      "sourceRoot": "projects/services/notifications/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/services/notifications/tsconfig.lib.json",
+            "project": "projects/services/notifications/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/services/notifications/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/services/notifications/src/test.ts",
+            "tsConfig": "projects/services/notifications/tsconfig.spec.json",
+            "karmaConfig": "projects/services/notifications/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/services/notifications/tsconfig.lib.json",
+              "projects/services/notifications/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "@apps/website"

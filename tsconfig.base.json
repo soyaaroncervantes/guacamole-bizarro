@@ -117,6 +117,10 @@
       "@services/facade-albums": [
         "dist/services/facade-albums/services-facade-albums",
         "dist/services/facade-albums"
+      ],
+      "@services/notifications": [
+        "dist/services/notifications/services-notifications",
+        "dist/services/notifications"
       ]
     },
     "sourceMap": true,
