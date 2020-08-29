@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { websiteRoutes } from '@const/website';
+import { slideLeftTrigger } from './home.animation';
 
 @Component({
   selector: 'lib-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [ slideLeftTrigger ]
 })
 export class HomeComponent implements OnInit {
 
