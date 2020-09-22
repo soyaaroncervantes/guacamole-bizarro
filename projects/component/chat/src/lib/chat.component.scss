@@ -1,0 +1,15 @@
+:host {
+  display: grid;
+  padding: 1em;
+  height: 100%;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.messages {
+  margin: 10px 0;
+  overflow-y: scroll;
+}
+
+.message__text {
+  margin-bottom: 10px;
+}

@@ -12,9 +12,9 @@ import { WebsiteStoreModule } from '@store/website';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AppFirebaseModule } from './app-firebase.module';
 import { environment } from '../environments/environment';
 import { UserStoreModule } from '@store/user';
+import { FirebaseModule } from '@config/firebase';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { UserStoreModule } from '@store/user';
   ],
   imports: [
     AppRoutingModule,
-    AppFirebaseModule,
+    FirebaseModule,
     BrowserModule,
     BrowserAnimationsModule,
     HeaderModule,

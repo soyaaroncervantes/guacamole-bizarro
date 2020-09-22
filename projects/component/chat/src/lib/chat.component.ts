@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from './chat.service';
 
 @Component({
   selector: 'lib-chat',
-  template: `
-    <p>
-      chat works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  mensaje = '';
 
-  ngOnInit(): void {
+  constructor(
+    private chatService: ChatService
+  ) {
+    this.chatService.loadChats.subscribe( console.log );
   }
 
+  ngOnInit(): void {}
+
+  sendMessage(): void { }
 }
