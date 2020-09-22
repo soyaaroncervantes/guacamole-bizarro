@@ -1,5 +1,5 @@
 export const firebase = {
-apiKey: 'AIzaSyA7fIL3jqR40tQk1xs1G2ztrN49kWdH-ik',
+  apiKey: 'AIzaSyA7fIL3jqR40tQk1xs1G2ztrN49kWdH-ik',
   authDomain: 'albums-monorepo.firebaseapp.com',
   databaseURL: 'https://albums-monorepo.firebaseio.com',
   projectId: 'albums-monorepo',
