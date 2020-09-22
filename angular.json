@@ -1380,6 +1380,46 @@
           }
         }
       }
+    },
+    "@component/chat": {
+      "projectType": "library",
+      "root": "projects/component/chat",
+      "sourceRoot": "projects/component/chat/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/component/chat/tsconfig.lib.json",
+            "project": "projects/component/chat/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/component/chat/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/component/chat/src/test.ts",
+            "tsConfig": "projects/component/chat/tsconfig.spec.json",
+            "karmaConfig": "projects/component/chat/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/component/chat/tsconfig.lib.json",
+              "projects/component/chat/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "@apps/website"

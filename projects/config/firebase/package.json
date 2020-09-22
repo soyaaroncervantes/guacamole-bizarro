@@ -3,9 +3,19 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
-    "@angular/core": "^10.0.14"
+    "@angular/core": "^10.0.14",
+    "@angular/fire": "^6.0.2",
+    "firebase": "^7.13.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @config/firebase",
+    "watch": "ng build @config/firebase --watch",
+    "test": "ng test @config/firebase",
+    "lint": "ng lint @config/firebase"
   }
+
 }

@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
-import { FirebaseComponent } from './firebase.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { firebase } from './firebase.config';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 @NgModule({
-  declarations: [FirebaseComponent],
   imports: [
+    AngularFireModule.initializeApp( firebase ),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
-  exports: [FirebaseComponent]
+  exports: [
+    AngularFireModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule
+  ]
 })
 export class FirebaseModule { }

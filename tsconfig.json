@@ -189,6 +189,12 @@
     },
     {
       "path": "./projects/@apps/firebase-chat/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/chat/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/chat/tsconfig.spec.json"
     }
 ]
 }
