@@ -177,6 +177,18 @@
     },
     {
       "path": "./projects/services/notifications/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/config/firebase/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/config/firebase/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/@apps/firebase-chat/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/@apps/firebase-chat/tsconfig.spec.json"
     }
 ]
 }

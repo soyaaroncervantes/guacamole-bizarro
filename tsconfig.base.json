@@ -14,9 +14,25 @@
     "moduleResolution": "node",
     "outDir": "./dist/out-tsc",
     "paths": {
+      "@component/account-form": [
+        "dist/component/account-form/component-account-form",
+        "dist/component/account-form"
+      ],
+      "@component/button-access": [
+        "dist/component/button-access/component-button-access",
+        "dist/component/button-access"
+      ],
+      "@component/card": [
+        "dist/component/card/component-card",
+        "dist/component/card"
+      ],
       "@component/header": [
         "dist/component/header/component-header",
         "dist/component/header"
+      ],
+      "@component/rolling-svg": [
+        "dist/component/rolling-svg/component-rolling-svg",
+        "dist/component/rolling-svg"
       ],
       "@component/sidenav-website": [
         "dist/component/sidenav-website/component-sidenav-website",
@@ -25,6 +41,74 @@
       "@component/toolbar-website": [
         "dist/component/toolbar-website/component-toolbar-website",
         "dist/component/toolbar-website"
+      ],
+      "@config/firebase": [
+        "dist/config/firebase/config-firebase",
+        "dist/config/firebase"
+      ],
+      "@const/website": [
+        "dist/const/website/const-website",
+        "dist/const/website"
+      ],
+      "@effects/albums": [
+        "dist/effects/albums/effects-albums",
+        "dist/effects/albums"
+      ],
+      "@interfaces/album": [
+        "dist/interfaces/album/interfaces-album",
+        "dist/interfaces/album"
+      ],
+      "@interfaces/user": [
+        "dist/interfaces/user/interfaces-user",
+        "dist/interfaces/user"
+      ],
+      "@routes/albums": [
+        "dist/routes/albums/routes-albums",
+        "dist/routes/albums"
+      ],
+      "@routes/home": [
+        "dist/routes/home/routes-home",
+        "dist/routes/home"
+      ],
+      "@routes/login": [
+        "dist/routes/login/routes-login",
+        "dist/routes/login"
+      ],
+      "@routes/signin": [
+        "dist/routes/signin/routes-signin",
+        "dist/routes/signin"
+      ],
+      "@services/api-albums": [
+        "dist/services/api-albums/services-api-albums",
+        "dist/services/api-albums"
+      ],
+      "@services/api-create-user": [
+        "dist/services/api-create-user/services-api-create-user",
+        "dist/services/api-create-user"
+      ],
+      "@services/api-login": [
+        "dist/services/api-login/services-api-login",
+        "dist/services/api-login"
+      ],
+      "@services/facade-albums": [
+        "dist/services/facade-albums/services-facade-albums",
+        "dist/services/facade-albums"
+      ],
+      "@services/facade-create-user": [
+        "dist/services/facade-create-user/services-facade-create-user",
+        "dist/services/facade-create-user"
+      ],
+      "@services/facade-login": [
+        "dist/services/facade-login/services-facade-login",
+        "dist/services/facade-login"
+      ],
+      "@services/facade-user": [
+        "dist/services/facade-user/services-facade-user",
+        "dist/services/facade-user"
+      ],
+      "@services/notifications": [
+        "dist/services/notifications/services-notifications",
+        "dist/services/notifications"
       ],
       "@shared/header": [
         "dist/shared/header/shared-header",
@@ -38,89 +122,9 @@
         "dist/store/album/store-album",
         "dist/store/album"
       ],
-      "@routes/home": [
-        "dist/routes/home/routes-home",
-        "dist/routes/home"
-      ],
-      "@routes/albums": [
-        "dist/routes/albums/routes-albums",
-        "dist/routes/albums"
-      ],
-      "@const/website": [
-        "dist/const/website/const-website",
-        "dist/const/website"
-      ],
-      "@component/card": [
-        "dist/component/card/component-card",
-        "dist/component/card"
-      ],
-      "@interfaces/album": [
-        "dist/interfaces/album/interfaces-album",
-        "dist/interfaces/album"
-      ],
-      "@services/api-albums": [
-        "dist/services/api-albums/services-api-albums",
-        "dist/services/api-albums"
-      ],
-      "@effects/albums": [
-        "dist/effects/albums/effects-albums",
-        "dist/effects/albums"
-      ],
-      "@routes/login": [
-        "dist/routes/login/routes-login",
-        "dist/routes/login"
-      ],
-      "@interfaces/user": [
-        "dist/interfaces/user/interfaces-user",
-        "dist/interfaces/user"
-      ],
-      "@services/api-login": [
-        "dist/services/api-login/services-api-login",
-        "dist/services/api-login"
-      ],
-      "@services/api-create-user": [
-        "dist/services/api-create-user/services-api-create-user",
-        "dist/services/api-create-user"
-      ],
-      "@services/facade-create-user": [
-        "dist/services/facade-create-user/services-facade-create-user",
-        "dist/services/facade-create-user"
-      ],
-      "@services/facade-login": [
-        "dist/services/facade-login/services-facade-login",
-        "dist/services/facade-login"
-      ],
-      "@routes/signin": [
-        "dist/routes/signin/routes-signin",
-        "dist/routes/signin"
-      ],
-      "@component/account-form": [
-        "dist/component/account-form/component-account-form",
-        "dist/component/account-form"
-      ],
       "@store/user": [
         "dist/store/user/store-user",
         "dist/store/user"
-      ],
-      "@component/rolling-svg": [
-        "dist/component/rolling-svg/component-rolling-svg",
-        "dist/component/rolling-svg"
-      ],
-      "@services/facade-user": [
-        "dist/services/facade-user/services-facade-user",
-        "dist/services/facade-user"
-      ],
-      "@component/button-access": [
-        "dist/component/button-access/component-button-access",
-        "dist/component/button-access"
-      ],
-      "@services/facade-albums": [
-        "dist/services/facade-albums/services-facade-albums",
-        "dist/services/facade-albums"
-      ],
-      "@services/notifications": [
-        "dist/services/notifications/services-notifications",
-        "dist/services/notifications"
       ]
     },
     "sourceMap": true,

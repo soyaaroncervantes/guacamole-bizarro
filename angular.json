@@ -7,6 +7,127 @@
   },
   "newProjectRoot": "projects",
   "projects": {
+    "@apps/firebase-chat": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/@apps/firebase-chat",
+      "sourceRoot": "projects/@apps/firebase-chat/src",
+      "prefix": "chat",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/@apps/firebase-chat",
+            "index": "projects/@apps/firebase-chat/src/index.html",
+            "main": "projects/@apps/firebase-chat/src/main.ts",
+            "polyfills": "projects/@apps/firebase-chat/src/polyfills.ts",
+            "tsConfig": "projects/@apps/firebase-chat/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/@apps/firebase-chat/src/favicon.ico",
+              "projects/@apps/firebase-chat/src/assets"
+            ],
+            "styles": [
+              "projects/@apps/firebase-chat/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/@apps/firebase-chat/src/environments/environment.ts",
+                  "with": "projects/@apps/firebase-chat/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "@apps/firebase-chat:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "@apps/firebase-chat:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "@apps/firebase-chat:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/@apps/firebase-chat/src/test.ts",
+            "polyfills": "projects/@apps/firebase-chat/src/polyfills.ts",
+            "tsConfig": "projects/@apps/firebase-chat/tsconfig.spec.json",
+            "karmaConfig": "projects/@apps/firebase-chat/karma.conf.js",
+            "assets": [
+              "projects/@apps/firebase-chat/src/favicon.ico",
+              "projects/@apps/firebase-chat/src/assets"
+            ],
+            "styles": [
+              "projects/@apps/firebase-chat/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/@apps/firebase-chat/tsconfig.app.json",
+              "projects/@apps/firebase-chat/tsconfig.spec.json",
+              "projects/@apps/firebase-chat/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/@apps/firebase-chat/e2e/protractor.conf.js",
+            "devServerTarget": "@apps/firebase-chat:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "@apps/firebase-chat:serve:production"
+            }
+          }
+        }
+      }
+    },
     "@apps/website": {
       "projectType": "application",
       "schematics": {
@@ -292,6 +413,46 @@
             "tsConfig": [
               "projects/component/card/tsconfig.lib.json",
               "projects/component/card/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@config/firebase": {
+      "projectType": "library",
+      "root": "projects/config/firebase",
+      "sourceRoot": "projects/config/firebase/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/config/firebase/tsconfig.lib.json",
+            "project": "projects/config/firebase/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/config/firebase/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/config/firebase/src/test.ts",
+            "tsConfig": "projects/config/firebase/tsconfig.spec.json",
+            "karmaConfig": "projects/config/firebase/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/config/firebase/tsconfig.lib.json",
+              "projects/config/firebase/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
