@@ -1,0 +1,24 @@
+{
+  "name": "@component/chat",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.14",
+    "@angular/core": "^10.0.14",
+    "@angular/animations": "~10.0.2",
+    "@angular/cdk": "^10.0.1",
+    "@angular/material": "^10.0.1",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @component/card",
+    "watch": "ng build @component/card --watch",
+    "test": "ng test @component/card",
+    "lint": "ng lint @component/card"
+  }
+}

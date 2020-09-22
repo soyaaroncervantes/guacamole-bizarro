@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-firebase',
+  selector: 'lib-chat',
   template: `
     <p>
-      firebase works!
+      chat works!
     </p>
   `,
   styles: [
   ]
 })
-export class FirebaseComponent implements OnInit {
+export class ChatComponent implements OnInit {
 
   constructor() { }
 
