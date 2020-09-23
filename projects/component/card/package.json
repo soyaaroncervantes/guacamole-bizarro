@@ -13,7 +13,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "ng build @component/card --prod",
+    "build": "ng build @component/card",
     "watch": "ng build @component/card --watch",
     "test": "ng test @component/card",
     "lint": "ng lint @component/card"

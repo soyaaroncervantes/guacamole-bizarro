@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FirebaseModule } from '@config/firebase';
+import { ChatModule } from '@component/chat';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { FirebaseModule } from '@config/firebase';
   imports: [
     BrowserModule,
     FirebaseModule,
+    ChatModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
