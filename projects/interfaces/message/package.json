@@ -7,5 +7,12 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @interfaces/message",
+    "watch": "ng build @interfaces/message --watch",
+    "test": "ng test @interfaces/message",
+    "lint": "ng lint @interfaces/message"
   }
 }

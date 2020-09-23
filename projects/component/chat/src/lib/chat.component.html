@@ -3,20 +3,20 @@
   <hr/>
 </div>
 
-<div class="messages">
+<div class="messages" #messageElement>
 
-  <div class="text-right mb-2">
+  <div class="text-right mb-2" *ngFor="let chat  of chats | async">
     <span class="badge badge-primary">Aarón</span>
-    <p class="message__text">Este es un mensaje</p>
+    <p class="message__text">{{ chat.message }}</p>
   </div>
 
-  <div class="mb-2">
-    <span class="badge badge-dark">Ary</span>
-    <p class="message__text">Saludos Joven</p>
-  </div>
-
+<!--  <div class="mb-2">-->
+<!--    <span class="badge badge-dark">Ary</span>-->
+<!--    <p class="message__text">Saludos Joven</p>-->
+<!--  </div>-->
 
 </div>
+
 <div class="form">
   <input class="form-control"
          type="text"
@@ -24,4 +24,7 @@
          placeholder="Enviar mensaje"
          (keyup.enter)="sendMessage()"
          [(ngModel)]="mensaje">
+  <button (click)="sendMessage()">
+
+  </button>
 </div>
