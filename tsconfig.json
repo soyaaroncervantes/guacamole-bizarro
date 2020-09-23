@@ -195,6 +195,12 @@
     },
     {
       "path": "./projects/component/chat/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/interfaces/message/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/interfaces/message/tsconfig.spec.json"
     }
 ]
 }

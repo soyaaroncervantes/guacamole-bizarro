@@ -129,6 +129,10 @@
       "@component/chat": [
         "dist/component/chat/component-chat",
         "dist/component/chat"
+      ],
+      "@interfaces/message": [
+        "dist/interfaces/message/interfaces-message",
+        "dist/interfaces/message"
       ]
     },
     "sourceMap": true,
