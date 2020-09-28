@@ -201,6 +201,12 @@
     },
     {
       "path": "./projects/interfaces/message/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/component/login/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/component/login/tsconfig.spec.json"
     }
 ]
 }

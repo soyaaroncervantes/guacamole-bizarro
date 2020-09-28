@@ -133,6 +133,10 @@
       "@interfaces/message": [
         "dist/interfaces/message/interfaces-message",
         "dist/interfaces/message"
+      ],
+      "@component/login": [
+        "dist/component/login/component-login",
+        "dist/component/login"
       ]
     },
     "sourceMap": true,
