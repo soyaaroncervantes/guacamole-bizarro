@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Lint Const Website" type="js.build_tools.npm" folderName="Const Website">
+    <package-json value="$PROJECT_DIR$/projects/const/website/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="lint" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

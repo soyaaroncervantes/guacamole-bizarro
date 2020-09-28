@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Lint Button Access" type="js.build_tools.npm" folderName="Component Button Access">
+    <package-json value="$PROJECT_DIR$/projects/component/button-access/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="lint" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

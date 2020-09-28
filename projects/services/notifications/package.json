@@ -7,5 +7,12 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng build @services/notifications",
+    "watch": "ng build @services/notifications --watch",
+    "test": "ng test @services/notifications",
+    "lint": "ng lint @services/notifications"
   }
 }

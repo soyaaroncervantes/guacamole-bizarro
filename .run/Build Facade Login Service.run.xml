@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Build Facade Login Service" type="js.build_tools.npm" folderName="Facade Login Service">
+    <package-json value="$PROJECT_DIR$/projects/services/facade-login/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="build" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Watch Albums Facade" type="js.build_tools.npm" folderName="Facade Albums Service">
+    <package-json value="$PROJECT_DIR$/projects/services/facade-albums/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="watch" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test Routes Sign In" type="js.build_tools.npm" folderName="Routes Sign In">
+    <package-json value="$PROJECT_DIR$/projects/routes/signin/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="build" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

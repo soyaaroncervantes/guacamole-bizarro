@@ -9,7 +9,14 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  loginGoogle(): void {
+    console.log('%c It works, Google', 'color: #4285F4');
+  }
+
+  loginTwitter(): void {
+    console.log('%c It works, Twitter', 'color: #1DA1F2');
   }
 
 }

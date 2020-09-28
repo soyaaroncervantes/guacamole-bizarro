@@ -1,5 +1,5 @@
 {
-  "name": "@services/facade-user",
+  "name": "@services/notifications",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.6",
@@ -10,9 +10,9 @@
   },
   "private": true,
   "scripts": {
-    "build": "ng build @services/facade-user",
-    "watch": "ng build @services/facade-user --watch",
-    "test": "ng test @services/facade-user",
-    "lint": "ng lint @services/facade-user"
+    "build": "ng build @services/notifications",
+    "watch": "ng build @services/notifications --watch",
+    "test": "ng test @services/notifications",
+    "lint": "ng lint @services/notifications"
   }
 }

@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Lint Facade User" type="js.build_tools.npm" folderName="Facade User Service">
+    <package-json value="$PROJECT_DIR$/projects/services/facade-user/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="lint" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

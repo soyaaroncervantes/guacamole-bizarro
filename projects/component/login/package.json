@@ -2,10 +2,20 @@
   "name": "@component/login",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^10.0.14",
-    "@angular/core": "^10.0.14"
+    "@angular/common": "^10.0.2",
+    "@angular/core": "^10.0.2",
+    "@angular/cdk": "^10.0.1",
+    "@angular/animations": "^10.0.2",
+    "@angular/material": "^10.0.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "ng b @component/login",
+    "watch": "ng b @component/login --watch",
+    "test": "ng test @component/login",
+    "lint": "ng lint @component/login"
   }
 }

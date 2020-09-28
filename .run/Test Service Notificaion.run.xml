@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test Service Notificaion" type="js.build_tools.npm" folderName="Service Notificaion">
+    <package-json value="$PROJECT_DIR$/projects/services/notifications/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="test" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

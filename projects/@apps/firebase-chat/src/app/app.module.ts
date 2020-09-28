@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FirebaseModule } from '@config/firebase';
 import { ChatModule } from '@component/chat';
+import { LoginModule } from '@component/login';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ChatModule } from '@component/chat';
     BrowserModule,
     FirebaseModule,
     ChatModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
