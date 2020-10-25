@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FirebaseModule } from '@config/firebase';
 import { ChatModule } from '@component/chat';
 import { LoginModule } from '@component/login';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoginModule } from '@component/login';
     BrowserModule,
     FirebaseModule,
     ChatModule,
-    LoginModule
+    LoginModule,
+    StoreModule.forRoot({}),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,14 +5,13 @@ import { Router } from '@angular/router';
 import { ApiLoginService } from '@services/api-login';
 import { ApiCreateUserService } from '@services/api-create-user';
 
-import { websiteRoutes } from '@const/website';
+import { catchError, map, mergeMap, tap } from 'rxjs/operators';
 
-import { UserCredential, UserInfo } from '@firebase/auth-types';
-
-import { of } from 'rxjs';
-import { catchError, map, mergeMap, pluck, tap } from 'rxjs/operators';
+import { userObservableAction$ } from './user.utilities';
 
 import * as fromAction from './user.actions';
+import { websiteRoutes } from '@const/website';
+import { of } from 'rxjs';
 
 @Injectable()
 export class UserEffects {
@@ -28,13 +27,8 @@ export class UserEffects {
     this.actions$.pipe(
       ofType( fromAction.createUser ),
       mergeMap( ({ user }) =>
-        this.apiCreateUserService.createUser( user )
+        userObservableAction$( this.apiCreateUserService.createUser( user ) )
           .pipe(
-            pluck( 'user' ),
-            map( ( { uid, displayName, phoneNumber, photoURL, email } ) => {
-              return { uid, displayName, phoneNumber, photoURL, email };
-            }),
-            map( ( userInfo: UserInfo ) => fromAction.userSuccess({ userInfo }) ),
             tap( () => this.router.navigate([ websiteRoutes.parent, websiteRoutes.children.albums ]) ),
             catchError( errors => of( fromAction.userFailure({ errors }) ) )
           )
@@ -46,13 +40,8 @@ export class UserEffects {
     this.actions$.pipe(
       ofType( fromAction.login ),
       mergeMap( ({ user }) =>
-        this.apiLoginService.loginUser( user )
+        userObservableAction$( this.apiLoginService.loginUser( user ) )
           .pipe(
-            pluck( 'user' ),
-            map( ( { uid, displayName, phoneNumber, photoURL, email } ) => {
-              return { uid, displayName, phoneNumber, photoURL, email };
-            }),
-            map( ( userInfo: UserInfo ) => fromAction.userSuccess({ userInfo }) ),
             tap( () => this.router.navigate([ websiteRoutes.parent, websiteRoutes.children.albums ]) ),
             catchError( errors => of( fromAction.userFailure({ errors }) ) )
           )

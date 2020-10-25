@@ -8,7 +8,7 @@
     "website:test": "ng test @apps/website",
     "website:lint": "ng lint @apps/website",
     "website:e2e": "ng e2e @apps/website",
-    "firebase-chat:start": "ng serve @apps/firebase-chat",
+    "firebase-chat:start": "ng serve @apps/firebase-chat --port 4201",
     "firebase-chat:build": "ng build @apps/firebase-chat",
     "firebase-chat:test": "ng test @apps/firebase-chat",
     "firebase-chat:lint": "ng lint @apps/firebase-chat",

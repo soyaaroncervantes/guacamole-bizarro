@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { User } from '@interfaces/user';
-import { from, Observable } from 'rxjs';
-import * as firebase from 'firebase';
+import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import UserCredential = firebase.auth.UserCredential;
+import * as userInterface from '@interfaces/user';
+import { User } from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +13,9 @@ export class ApiCreateUserService {
     private angularFireAuth: AngularFireAuth
   ) { }
 
-  createUser( user: User ): Observable<UserCredential> {
-    return from( this.angularFireAuth.createUserWithEmailAndPassword( user.email, user.password ) );
+  createUser( user: userInterface.User ): Observable<User> {
+    this.angularFireAuth.createUserWithEmailAndPassword( user.email, user.password ).then()
+    return this.angularFireAuth.authState;
   }
 
 }
