@@ -137,6 +137,10 @@
       "@component/login": [
         "dist/component/login/component-login",
         "dist/component/login"
+      ],
+      "@store/social-media": [
+        "dist/store/social-media/store-social-media",
+        "dist/store/social-media"
       ]
     },
     "sourceMap": true,

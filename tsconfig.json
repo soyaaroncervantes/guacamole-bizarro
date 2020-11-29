@@ -8,13 +8,13 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/@apps/website/tsconfig.app.json"
+      "path": "./projects/apps/website/tsconfig.app.json"
     },
     {
-      "path": "./projects/@apps/website/tsconfig.spec.json"
+      "path": "./projects/apps/website/tsconfig.spec.json"
     },
     {
-      "path": "./projects/@apps/website/e2e/tsconfig.json"
+      "path": "./projects/apps/website/e2e/tsconfig.json"
     },
     {
       "path": "./projects/component/header/tsconfig.lib.json"
@@ -185,10 +185,10 @@
       "path": "./projects/config/firebase/tsconfig.spec.json"
     },
     {
-      "path": "./projects/@apps/firebase-chat/tsconfig.app.json"
+      "path": "./projects/apps/firebase-chat/tsconfig.app.json"
     },
     {
-      "path": "./projects/@apps/firebase-chat/tsconfig.spec.json"
+      "path": "./projects/apps/firebase-chat/tsconfig.spec.json"
     },
     {
       "path": "./projects/component/chat/tsconfig.lib.json"
@@ -207,6 +207,12 @@
     },
     {
       "path": "./projects/component/login/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/store/social-media/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/store/social-media/tsconfig.spec.json"
     }
 ]
 }

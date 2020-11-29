@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { User } from '@interfaces/user';
 import { Store } from '@ngrx/store';
 import * as fromUser from '@store/user';
-import { map } from 'rxjs/operators';
 import { ApiLoginService } from '@services/api-login';
 
 @Injectable({
@@ -20,17 +19,7 @@ export class FacadeLoginService {
   }
 
   google(): void {
-    const subscription = this.store
-      .select('info' )
-      .pipe(
-        map( value =>
-          value ?
-            this.store.dispatch( fromUser.login({ user: { email: '', password: '' } }) ) :
-            this.apiLoginService.loginGoogle()
-        )
-      )
-      .subscribe();
-    subscription.unsubscribe();
+
   }
 
 }

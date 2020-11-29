@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="mb-5">Firechat</h1>
+  <component-login *ngIf="chats"></component-login>
+  <ng-template>
+    <div class="chat__windows border border-success rounded">
+      <component-chat></component-chat>
+    </div>
+  </ng-template>
+</div>

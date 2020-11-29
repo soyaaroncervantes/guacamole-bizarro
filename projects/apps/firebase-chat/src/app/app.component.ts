@@ -8,8 +8,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   chats: Observable<any[]>;
+
   constructor(firestore: AngularFirestore) {
     this.chats = firestore.collection('chats').valueChanges();
   }
+
 }
