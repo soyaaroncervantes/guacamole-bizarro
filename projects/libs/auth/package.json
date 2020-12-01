@@ -1,0 +1,17 @@
+{
+  "name": "@libs/auth",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.14",
+    "@angular/core": "^10.0.14"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "scripts": {
+    "build": "ng build @libs/auth",
+    "watch": "ng build @libs/auth --watch",
+    "test": "ng test @libs/auth",
+    "lint": "ng lint @libs/auth"
+  }
+}

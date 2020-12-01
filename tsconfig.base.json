@@ -141,6 +141,14 @@
       "@store/social-media": [
         "dist/store/social-media/store-social-media",
         "dist/store/social-media"
+      ],
+      "@libs/auth": [
+        "dist/libs/auth/libs-auth",
+        "dist/libs/auth"
+      ],
+      "@libs/albums": [
+        "dist/libs/albums/libs-albums",
+        "dist/libs/albums"
       ]
     },
     "sourceMap": true,

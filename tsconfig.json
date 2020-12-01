@@ -213,6 +213,18 @@
     },
     {
       "path": "./projects/store/social-media/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/libs/auth/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/libs/auth/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/libs/albums/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/libs/albums/tsconfig.spec.json"
     }
 ]
 }

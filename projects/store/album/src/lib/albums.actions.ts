@@ -7,6 +7,3 @@ export const deleteAlbums = createAction( '[ API/Albums ] Delete Album', props<{
 export const editAlbums = createAction( '[ API/Albums ] Edit Album', props<{ album: Album }>() );
 
 export const getAlbumsSuccess = createAction( '[ API/Albums ] Get Albums Success', props<{ albums: Album[] }>() );
-export const addAlbumsSuccess = createAction( '[ API/Albums ] Add Album Success', props<{ album: Album }>() );
-export const deleteAlbumsSuccess = createAction( '[ API/Albums ] Delete Album Success', props<{ album: Album }>() );
-export const editAlbumsSuccess = createAction( '[ API/Albums ] Edit Album Success', props<{ album: Album }>() );

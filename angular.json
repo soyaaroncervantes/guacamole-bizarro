@@ -1551,6 +1551,86 @@
           }
         }
       }
+    },
+    "@libs/auth": {
+      "projectType": "library",
+      "root": "projects/libs/auth",
+      "sourceRoot": "projects/libs/auth/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/libs/auth/tsconfig.lib.json",
+            "project": "projects/libs/auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/libs/auth/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/libs/auth/src/test.ts",
+            "tsConfig": "projects/libs/auth/tsconfig.spec.json",
+            "karmaConfig": "projects/libs/auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/libs/auth/tsconfig.lib.json",
+              "projects/libs/auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@libs/albums": {
+      "projectType": "library",
+      "root": "projects/libs/albums",
+      "sourceRoot": "projects/libs/albums/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/libs/albums/tsconfig.lib.json",
+            "project": "projects/libs/albums/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/libs/albums/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/libs/albums/src/test.ts",
+            "tsConfig": "projects/libs/albums/tsconfig.spec.json",
+            "karmaConfig": "projects/libs/albums/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/libs/albums/tsconfig.lib.json",
+              "projects/libs/albums/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "@apps/website"

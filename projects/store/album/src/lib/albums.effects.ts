@@ -31,7 +31,8 @@ export class AlbumsEffects {
       mergeMap( ({ album }) =>
         this.apiAlbumsService.addAlbum( album )
           .pipe(
-            map( () => fromAlbums.addAlbumsSuccess({ album }) )
+            map( actions => actions.map( value => value.payload.doc.data() ) ),
+            map( albums => fromAlbums.getAlbumsSuccess({ albums }) )
           )
       )
     )
@@ -43,7 +44,8 @@ export class AlbumsEffects {
       mergeMap( ({ album }) =>
         this.apiAlbumsService.editAlbum( album )
           .pipe(
-            map( () => fromAlbums.editAlbumsSuccess({ album }) )
+            map( actions => actions.map( value => value.payload.doc.data() ) ),
+            map( albums => fromAlbums.getAlbumsSuccess({ albums }) )
           )
       )
     )
@@ -55,7 +57,8 @@ export class AlbumsEffects {
       mergeMap( ({ album }) =>
         this.apiAlbumsService.addAlbum( album )
           .pipe(
-            map( () => fromAlbums.addAlbumsSuccess({ album }) )
+            map( actions => actions.map( value => value.payload.doc.data() ) ),
+            map( albums => fromAlbums.getAlbumsSuccess({ albums }) )
           )
       )
     )

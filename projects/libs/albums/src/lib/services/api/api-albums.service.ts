@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 import { Album } from '@interfaces/album';
-import { from, Observable, of } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { from, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: 'platform'
 })
 export class ApiAlbumsService {
-
   private albumsCollection: AngularFirestoreCollection<Album>;
 
   constructor( private angularFirestore: AngularFirestore ) {
@@ -19,23 +17,28 @@ export class ApiAlbumsService {
     return this.albumsCollection.stateChanges();
   }
 
-  addAlbum( album: Album ): Observable<DocumentChangeAction<Album>[]> {
+  album$( id: string ): Observable<Album> {
+    return this.albumsCollection.doc<Album>( id ).valueChanges();
+  }
+
+  addAlbum( album: Album ): Observable<Album> {
 
     const id = this.angularFirestore.createId();
     const item: Album = { ...album, id };
 
     from( this.albumsCollection.doc( id ).set( item ) );
-    return this.albums$;
+    return this.album$( id );
   }
 
-  editAlbum( album: Album ): Observable<DocumentChangeAction<Album>[]> {
+  editAlbum( album: Album ): Observable<Album> {
     from( this.albumsCollection.doc( album.id ).update({ ...album }) );
-    return this.albums$;
+    return this.album$( album.id );
+
   }
 
-  deleteAlbum( album: Album ): Observable<DocumentChangeAction<Album>[]> {
+  deleteAlbum( album: Album ): Observable<Album> {
     from( this.albumsCollection.doc( album.id ).delete() );
-    return this.albums$;
+    return this.album$( album.id );
   }
 
 }
