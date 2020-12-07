@@ -50,18 +50,6 @@
         "dist/const/website/const-website",
         "dist/const/website"
       ],
-      "@effects/albums": [
-        "dist/effects/albums/effects-albums",
-        "dist/effects/albums"
-      ],
-      "@interfaces/album": [
-        "dist/interfaces/album/interfaces-album",
-        "dist/interfaces/album"
-      ],
-      "@interfaces/user": [
-        "dist/interfaces/user/interfaces-user",
-        "dist/interfaces/user"
-      ],
       "@routes/albums": [
         "dist/routes/albums/routes-albums",
         "dist/routes/albums"
@@ -82,29 +70,9 @@
         "dist/services/api-albums/services-api-albums",
         "dist/services/api-albums"
       ],
-      "@services/api-create-user": [
-        "dist/services/api-create-user/services-api-create-user",
-        "dist/services/api-create-user"
-      ],
-      "@services/api-login": [
-        "dist/services/api-login/services-api-login",
-        "dist/services/api-login"
-      ],
       "@services/facade-albums": [
         "dist/services/facade-albums/services-facade-albums",
         "dist/services/facade-albums"
-      ],
-      "@services/facade-create-user": [
-        "dist/services/facade-create-user/services-facade-create-user",
-        "dist/services/facade-create-user"
-      ],
-      "@services/facade-login": [
-        "dist/services/facade-login/services-facade-login",
-        "dist/services/facade-login"
-      ],
-      "@services/facade-user": [
-        "dist/services/facade-user/services-facade-user",
-        "dist/services/facade-user"
       ],
       "@services/notifications": [
         "dist/services/notifications/services-notifications",
@@ -113,18 +81,6 @@
       "@shared/header": [
         "dist/shared/header/shared-header",
         "dist/shared/header"
-      ],
-      "@store/website": [
-        "dist/store/website/store-website",
-        "dist/store/website"
-      ],
-      "@store/album": [
-        "dist/store/album/store-album",
-        "dist/store/album"
-      ],
-      "@store/user": [
-        "dist/store/user/store-user",
-        "dist/store/user"
       ],
       "@component/chat": [
         "dist/component/chat/component-chat",
@@ -137,10 +93,6 @@
       "@component/login": [
         "dist/component/login/component-login",
         "dist/component/login"
-      ],
-      "@store/social-media": [
-        "dist/store/social-media/store-social-media",
-        "dist/store/social-media"
       ],
       "@libs/auth": [
         "dist/libs/auth/libs-auth",

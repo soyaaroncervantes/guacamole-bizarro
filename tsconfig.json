@@ -41,18 +41,6 @@
       "path": "./projects/shared/header/tsconfig.spec.json"
     },
     {
-      "path": "./projects/store/website/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/store/website/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/store/album/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/store/album/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/routes/home/tsconfig.lib.json"
     },
     {
@@ -77,58 +65,16 @@
       "path": "./projects/component/card/tsconfig.spec.json"
     },
     {
-      "path": "./projects/interfaces/album/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/interfaces/album/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/services/api-albums/tsconfig.lib.json"
     },
     {
       "path": "./projects/services/api-albums/tsconfig.spec.json"
     },
     {
-      "path": "./projects/effects/albums/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/effects/albums/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/routes/login/tsconfig.lib.json"
     },
     {
       "path": "./projects/routes/login/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/interfaces/user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/interfaces/user/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/services/api-login/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/services/api-login/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/services/api-create-user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/services/api-create-user/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/services/facade-create-user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/services/facade-create-user/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/services/facade-login/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/services/facade-login/tsconfig.spec.json"
     },
     {
       "path": "./projects/routes/signin/tsconfig.lib.json"
@@ -143,22 +89,10 @@
       "path": "./projects/component/account-form/tsconfig.spec.json"
     },
     {
-      "path": "./projects/store/user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/store/user/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/component/rolling-svg/tsconfig.lib.json"
     },
     {
       "path": "./projects/component/rolling-svg/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/services/facade-user/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/services/facade-user/tsconfig.spec.json"
     },
     {
       "path": "./projects/component/button-access/tsconfig.lib.json"
@@ -207,12 +141,6 @@
     },
     {
       "path": "./projects/component/login/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/store/social-media/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/store/social-media/tsconfig.spec.json"
     },
     {
       "path": "./projects/libs/auth/tsconfig.lib.json"
