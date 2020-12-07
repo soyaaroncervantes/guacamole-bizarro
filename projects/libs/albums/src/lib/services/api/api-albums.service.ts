@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
-import { Album } from '@interfaces/album';
+import { Album } from '../../interfaces/album.interface';
 import { from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'platform'
 })
+
 export class ApiAlbumsService {
   private albumsCollection: AngularFirestoreCollection<Album>;
 

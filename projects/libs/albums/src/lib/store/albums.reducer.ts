@@ -22,17 +22,21 @@ export const reducer = createReducer(
     ...state,
     albums: [ ...albums ]
   }) ),
-  on( albumsAction.addAlbum, ( state, { album } ) => ({
+  on( albumsAction.loadAlbumSuccess, ( state, { album } )  => ({
+    ...state,
+    album: state.albums.find( value => value.id === album.id )
+  })),
+  on( albumsAction.addAlbumSuccess, ( state, { album } ) => ({
     ...state,
     albums: [ ...state.albums, album ],
     album
   }) ),
-  on( albumsAction.editAlbum, ( state, { album }) => ({
+  on( albumsAction.editAlbumSuccess, ( state, { album }) => ({
     ...state,
     albums: state.albums.map( value => value.id === album.id ? { ...album } : value ),
     album
   }) ),
-  on( albumsAction.editAlbum, ( state, { album }) => ({
+  on( albumsAction.editAlbumSuccess, ( state, { album }) => ({
     ...state,
     albums: state.albums.filter( value => value.id !== album.id ),
     album: null

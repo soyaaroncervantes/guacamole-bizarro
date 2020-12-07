@@ -3,8 +3,9 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, concatMap } from 'rxjs/operators';
 
 import * as AlbumsActions from './albums.actions';
+
 import { ApiAlbumsService } from '../services/api/api-albums.service';
-import { of } from 'rxjs';
+import { EMPTY, of } from 'rxjs';
 
 @Injectable()
 export class AlbumsEffects {
@@ -23,6 +24,19 @@ export class AlbumsEffects {
     )
   );
 
+  getAlbum$ = createEffect( () =>
+    this.actions$.pipe(
+      ofType( AlbumsActions.loadAlbum ),
+      concatMap( ({ album }) =>
+        EMPTY
+          .pipe(
+            map( () => AlbumsActions.loadAlbumSuccess({ album }) ),
+            catchError(error => of(AlbumsActions.loadAlbumFailure({ error })))
+          )
+      )
+    )
+  );
+
   addAlbum$ = createEffect( () =>
     this.actions$.pipe(
       ofType( AlbumsActions.addAlbum ),
@@ -30,7 +44,7 @@ export class AlbumsEffects {
         this.apiAlbumsService.addAlbum( album )
           .pipe(
             map( value => AlbumsActions.addAlbumSuccess({ album: value }) ),
-            catchError(error => of( AlbumsActions.loadAlbumFailure({ error })))
+            catchError(error => of( AlbumsActions.loadAlbumsFailure({ error })))
           )
       )
     )
@@ -43,7 +57,7 @@ export class AlbumsEffects {
         this.apiAlbumsService.editAlbum( album )
           .pipe(
             map( value => AlbumsActions.editAlbumSuccess({ album: value }) ),
-            catchError(error => of(AlbumsActions.loadAlbumFailure({ error })))
+            catchError(error => of(AlbumsActions.loadAlbumsFailure({ error })))
           )
       )
     )
@@ -56,7 +70,7 @@ export class AlbumsEffects {
         this.apiAlbumsService.deleteAlbum( album )
           .pipe(
             map( value => AlbumsActions.deleteAlbumSuccess({ album: value }) ),
-            catchError(error => of(AlbumsActions.loadAlbumFailure({ error })))
+            catchError(error => of(AlbumsActions.loadAlbumsFailure({ error })))
           )
       )
     )

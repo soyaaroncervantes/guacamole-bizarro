@@ -6,7 +6,7 @@ import * as fromAlbums from '../../store/albums.reducer';
 
 import { Album } from '../../interfaces/album.interface';
 
-import { getAlbumsData } from '../../store/albums.selectors';
+import { getAlbumData, getAlbumsData } from '../../store/albums.selectors';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -22,12 +22,20 @@ export class FacadeAlbumsService {
     return this.store.select( getAlbumsData );
   }
 
+  get album$(): Observable<Album> {
+    return this.store.select( getAlbumData );
+  }
+
   dispatchAlbums(): void {
     this.store.dispatch( AlbumsActions.loadAlbums() );
   }
 
+  dispatchAlbum( album: Album ): void {
+    this.store.dispatch( AlbumsActions.loadAlbum({ album }) );
+  }
+
   delete( album: Album ): void {
-    this.store.dispatch( AlbumsActions.deleteAlbums( { album } ) );
+    this.store.dispatch( AlbumsActions.deleteAlbum( { album } ) );
   }
 
 }
