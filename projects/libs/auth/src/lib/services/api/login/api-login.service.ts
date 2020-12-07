@@ -21,9 +21,6 @@ export class ApiLoginService {
     return this.angularFireAuth.authState;
   }
 
-  logout(): Observable<void> {
-    return from( this.angularFireAuth.signOut() );
-  }
 
   loginGoogle(): Observable<User> {
     this.angularFireAuth.signInWithPopup( new auth.GoogleAuthProvider() ).then();

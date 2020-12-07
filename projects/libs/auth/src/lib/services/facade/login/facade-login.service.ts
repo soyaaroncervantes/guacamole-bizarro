@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { User } from '../../../interfaces/user.interface';
 import { Store } from '@ngrx/store';
-import * as fromUser from '@store/user';
-import { ApiLoginService } from '@services/api-login';
+import * as UserAction from '../../../store/user/user.actions';
+import * as fromUser from '../../../store/user/user.reducer';
 
 @Injectable({
   providedIn: 'platform'
@@ -10,16 +10,15 @@ import { ApiLoginService } from '@services/api-login';
 export class FacadeLoginService {
 
   constructor(
-    private apiLoginService: ApiLoginService,
     private store: Store<fromUser.State>,
   ) { }
 
   login( user: User ): void {
-    this.store.dispatch( fromUser.login({ user }) );
+    this.store.dispatch( UserAction.login({ user }) );
   }
 
   google(): void {
-
+    this.store.dispatch( UserAction.loginGoogle() );
   }
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
-import * as fromUser from './user.reducer';
-import * as fromEffects from './user.effects';
+import * as fromUser from './user/user.reducer';
+import * as fromEffects from './user/user.effects';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
