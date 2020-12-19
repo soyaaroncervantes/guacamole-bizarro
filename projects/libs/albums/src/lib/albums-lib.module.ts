@@ -10,4 +10,4 @@ import { FacadeAlbumsService } from './services/facade/facade-albums.service';
     FacadeAlbumsService,
   ]
 })
-export class AlbumsModule { }
+export class AlbumsLibModule { }
