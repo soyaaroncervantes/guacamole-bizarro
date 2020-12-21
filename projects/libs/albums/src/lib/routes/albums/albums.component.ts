@@ -3,9 +3,10 @@ import { UserInfo } from '@firebase/auth-types';
 import { Album } from '../../interfaces/album.interface';
 
 import { FacadeUserService } from '@libs/auth';
-import { FacadeAlbumsService } from '../../services/facade/facade-albums.service';
+import { AlbumsFacadeService } from '../../services/facade/albums/albums-facade.service';
 
 import { Observable } from 'rxjs';
+import { NotificationsFacadeService } from '../../services/facade/notifications/notifications-facade.service';
 
 @Component({
   selector: 'lib-albums',
@@ -18,20 +19,21 @@ export class AlbumsComponent implements OnInit {
   user$: Observable<UserInfo>;
 
   constructor(
-    private facadeAlbumsService: FacadeAlbumsService,
-    private facadeUserService: FacadeUserService
+    private albumsFacadeService: AlbumsFacadeService,
+    private facadeUserService: FacadeUserService,
+    private notificationsFacadeService: NotificationsFacadeService,
   ) {
-    this.albums$ = facadeAlbumsService.albums$;
+    this.albums$ = albumsFacadeService.albums$;
     this.user$ = facadeUserService.info;
   }
 
   ngOnInit(): void {
-    this.facadeAlbumsService.dispatchAlbums();
+    this.albumsFacadeService.loadAlbums();
     this.facadeUserService.dispatchUser();
   }
 
   addAlbum(): void {
-    console.log('add Album');
+    this.notificationsFacadeService.addAlbum();
   }
 
 }

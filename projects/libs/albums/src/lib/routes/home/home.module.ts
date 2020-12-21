@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { MatButtonModule } from '@angular/material/button';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { AlbumsComponentModule } from '../../components/albums-component.module';
 
-import { RollingSvgModule } from '@component/rolling-svg';
+import { HomeRoutingModule } from './home-routing.module';
+
+import { HomeComponent } from './home.component';
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [
+    HomeComponent
+  ],
   imports: [
+    AlbumsComponentModule,
     CommonModule,
     HomeRoutingModule,
-    RollingSvgModule,
-    MatButtonModule
+    MatButtonModule,
   ]
 })
 export class HomeModule { }

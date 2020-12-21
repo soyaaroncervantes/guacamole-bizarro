@@ -10,12 +10,14 @@
       </div>
     </div>
   </div>
+
   <div class="[ albums__content ]">
     <div class="[ container__card ]" *ngFor="let album of albums">
-      <component-card [album]="album"></component-card>
+      <lib-albums-card [album]="album"></lib-albums-card>
     </div>
   </div>
 </main>
+
 <ng-template #loading>
   <div class="container__spinner">
     <mat-spinner></mat-spinner>

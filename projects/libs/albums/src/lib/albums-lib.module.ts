@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
-import { AlbumsStoreModule } from './store/albums-store.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 import { ApiAlbumsService } from './services/api/api-albums.service';
-import { FacadeAlbumsService } from './services/facade/facade-albums.service';
+import { AlbumsFacadeService } from './services/facade/albums/albums-facade.service';
+import { NotificationsFacadeService } from './services/facade/notifications/notifications-facade.service';
+
+import { AlbumsStoreModule } from './store/albums-store.module';
 
 @NgModule({
-  imports: [ AlbumsStoreModule ],
+  imports: [
+    AlbumsStoreModule
+  ],
   providers: [
     ApiAlbumsService,
-    FacadeAlbumsService,
+    AlbumsFacadeService,
+    NotificationsFacadeService,
+    MatSnackBar,
   ]
 })
 export class AlbumsLibModule { }

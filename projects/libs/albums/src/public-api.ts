@@ -26,7 +26,7 @@ export * from './lib/routes/home/home.component';
 /************************************************\
                  #FACADE-SERVICES
 \************************************************/
-export * from './lib/services/facade/facade-albums.service';
+export * from './lib/services/facade/albums/albums-facade.service';
 
 
 

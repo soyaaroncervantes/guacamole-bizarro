@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 
-import { CardModule } from '@component/card';
-
-import { AlbumsStoreModule } from '../../store/albums-store.module';
+import { AlbumsComponentModule } from '../../components/albums-component.module';
 import { AlbumsRoutingModule } from './albums-routing.module';
+
 import { AlbumsComponent } from './albums.component';
+
 @NgModule({
   declarations: [
     AlbumsComponent
   ],
   imports: [
-    CommonModule,
+    AlbumsComponentModule,
     AlbumsRoutingModule,
-    AlbumsStoreModule,
-    CardModule,
+    CommonModule,
+    MatButtonModule,
     MatProgressSpinnerModule,
-    MatButtonModule
   ]
 })
 export class AlbumsModule { }
