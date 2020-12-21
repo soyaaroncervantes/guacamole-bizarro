@@ -8,7 +8,7 @@ import { from, Observable } from 'rxjs';
 })
 
 export class ApiAlbumsService {
-  private albumsCollection: AngularFirestoreCollection<Album>;
+  private readonly albumsCollection: AngularFirestoreCollection<Album>;
 
   constructor( private angularFirestore: AngularFirestore ) {
     this.albumsCollection = this.angularFirestore.collection<Album>('albums');
