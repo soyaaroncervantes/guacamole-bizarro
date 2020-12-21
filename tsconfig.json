@@ -24,6 +24,12 @@
     },
     {
       "path": "./projects/libs/albums/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/apps/albums/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/apps/albums/tsconfig.spec.json"
     }
 ]
 }
