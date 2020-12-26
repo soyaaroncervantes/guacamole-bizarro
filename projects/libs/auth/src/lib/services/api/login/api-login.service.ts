@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 import { auth, User } from 'firebase/app';
 
-import { from, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import * as userInterface from '../../../interfaces/user.interface';
 
