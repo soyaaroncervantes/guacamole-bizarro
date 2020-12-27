@@ -2,13 +2,12 @@
                    #MODULE
 \************************************************/
 export * from './lib/auth.module';
-
+export * from './lib/components/auth-component.module';
 
 
 /************************************************\
-              #FACADE_SERVICES
+                  #COMPONENT
 \************************************************/
-export * from './lib/services/facade/logout/facade-logout.service';
-export * from './lib/services/facade/login/facade-login.service';
-export * from './lib/services/facade/create-user/facade-create-user.service';
-export * from './lib/services/facade/user/facade-user.service';
+export * from './lib/components/button/facebook/facebook-button.component';
+export * from './lib/components/button/google/google-button.component';
+export * from './lib/components/button/twitter/twitter-button.component';

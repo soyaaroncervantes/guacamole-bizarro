@@ -1,27 +1,21 @@
 import { NgModule } from '@angular/core';
 import { UserStoreModule } from './store/user-store.module';
 
-import { FacadeCreateUserService } from './services/facade/create-user/facade-create-user.service';
-import { FacadeUserService } from './services/facade/user/facade-user.service';
-import { FacadeLoginService } from './services/facade/login/facade-login.service';
-import { FacadeLogoutService } from './services/facade/logout/facade-logout.service';
 
-import { ApiLoginService } from './services/api/login/api-login.service';
-import { ApiCreateUserService } from './services/api/create-user/api-create-user.service';
-import { ApiLogoutService } from './services/api/logout/api-logout.service';
+import { CreateUserApiService } from './services/api/create-user/create-user-api.service';
+import { SignInApiService } from './services/api/sign-in/sign-in-api.service';
+import { SignOutApiService } from './services/api/sign-out/sign-out-api.service';
+import { UserApiService } from './services/api/user/user-api.service';
 
 @NgModule({
   imports: [
     UserStoreModule,
   ],
   providers: [
-    ApiCreateUserService,
-    ApiLoginService,
-    ApiLogoutService,
-    FacadeCreateUserService,
-    FacadeLoginService,
-    FacadeLogoutService,
-    FacadeUserService
+    CreateUserApiService,
+    SignInApiService,
+    SignOutApiService,
+    UserApiService
   ]
 })
 export class AuthModule { }

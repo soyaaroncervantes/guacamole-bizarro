@@ -7,7 +7,12 @@
     "firebase-chat:build": "ng b @apps/firebase-chat",
     "firebase-chat:test": "ng test @apps/firebase-chat",
     "firebase-chat:lint": "ng lint @apps/firebase-chat",
-    "firebase-chat:e2e": "ng e2e @apps/firebase-chat"
+    "firebase-chat:e2e": "ng e2e @apps/firebase-chat",
+    "albums:start": "ng s @apps/albums --port 4200",
+    "albums:build": "ng b @apps/albums",
+    "albums:test": "ng test @apps/albums",
+    "albums:lint": "ng lint @apps/albums",
+    "albums:e2e": "ng e2e @apps/albums"
   },
   "private": true,
   "dependencies": {

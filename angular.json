@@ -153,6 +153,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "@firebase/app",
+              "@firebase/firestore",
+              "@firebase/auth",
+              "firebase/app",
+              "firebase"
+            ],
             "outputPath": "dist/albums",
             "index": "projects/apps/albums/src/index.html",
             "main": "projects/apps/albums/src/main.ts",
