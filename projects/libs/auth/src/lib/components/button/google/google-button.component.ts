@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SignInFacadeService } from '../../../services/facade/sign-in/sign-in-facade.service';
 
 @Component({
   selector: 'auth-google-button',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoogleButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private signInFacadeService: SignInFacadeService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  signIn(): void {
+    this.signInFacadeService.google();
   }
 
 }
