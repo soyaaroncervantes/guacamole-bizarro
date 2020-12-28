@@ -11,4 +11,4 @@ import { EffectsModule } from '@ngrx/effects';
     EffectsModule.forFeature([ fromEffects.UserEffects ])
   ]
 })
-export class UserStoreModule { }
+export class AuthStoreModule { }
