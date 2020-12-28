@@ -4,7 +4,7 @@ import { UserInterface } from '../../../interfaces/user.interface';
 import * as UserActions from '../../../store/user/user.actions';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'platform'
 })
 export class CreateUserFacadeService {
 

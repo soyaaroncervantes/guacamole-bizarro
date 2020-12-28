@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 import * as UserActions from '../../../store/user/user.actions';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'platform'
 })
 export class SignInFacadeService {
 
@@ -19,5 +19,7 @@ export class SignInFacadeService {
   twitter(): void {
     this.store.dispatch( UserActions.loginTwitter() );
   }
+
+  facebook(): void { }
 
 }

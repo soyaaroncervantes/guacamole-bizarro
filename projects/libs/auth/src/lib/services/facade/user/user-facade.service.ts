@@ -8,7 +8,7 @@ import * as UserActions from '../../../store/user/user.actions';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'platform'
 })
 export class UserFacadeService {
 
