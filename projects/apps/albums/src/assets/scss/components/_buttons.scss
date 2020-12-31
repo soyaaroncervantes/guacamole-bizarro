@@ -17,19 +17,10 @@
       0 1px 10px 0 rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.12),
       0 2px 4px 0 rgba(0, 0, 0, 0.14);
-    transition: all ease-in-out 100ms;
-
-    &:link {
-      transition: all ease-in-out 100ms;
-      transform: translateY( 0 );
-      box-shadow:
-        0 1px 10px 0 rgba(0, 0, 0, 0.2),
-        0 4px 5px 0 rgba(0, 0, 0, 0.12),
-        0 2px 4px 0 rgba(0, 0, 0, 0.14);
-    }
+    transition: all ease-in-out 125ms;
 
     &:hover {
-      transform: translateY( 2px );
+      transform: translateY( -3px );
       transition: all ease-in 250ms;
       box-shadow:
         0 4px 10px 0 rgba(0, 0, 0, 0.2),
@@ -38,7 +29,7 @@
     }
 
     &:active {
-      transform: translateY( -3px );
+      transform: translateY( 1px );
       transition: all ease-in 50ms;
       box-shadow:
         0 0 10px 0 rgba(0, 0, 0, 0.2),

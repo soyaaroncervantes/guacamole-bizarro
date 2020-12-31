@@ -1,7 +1,5 @@
 :host {
-  display: grid;
-  column-gap: 24px;
-  justify-items: center;
-  grid-template-columns: repeat( auto-fit, minmax( 140px, 1fr ) );
+  display: flex;
+  height: 100vh;
   margin: 0 24px;
 }

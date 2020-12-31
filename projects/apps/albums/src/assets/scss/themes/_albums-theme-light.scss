@@ -1,0 +1,4 @@
+@import '~@angular/material/theming';
+@import '~projects/apps/albums/src/assets/scss/abstract/variables';
+
+@include angular-material-theme( $apps-albums-theme );

@@ -1,0 +1,14 @@
+@import "~@angular/material/theming";
+@import "projects/apps/albums/src/assets/scss/abstract/colors";
+
+$apps-albums-primary: mat-palette( $md-primary-color, 500, 200 );
+$apps-albums-accent: mat-palette( $md-secondary-color, 800, 200, 900 );
+$apps-albums-warn: mat-palette( $md-error );
+
+$apps-albums-theme: mat-light-theme((
+  color: (
+    primary: $apps-albums-primary,
+    accent: $apps-albums-accent,
+    warn: $apps-albums-warn,
+  )
+));
