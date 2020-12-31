@@ -32,6 +32,7 @@
             "main": "projects/apps/firebase-chat/src/main.ts",
             "polyfills": "projects/apps/firebase-chat/src/polyfills.ts",
             "tsConfig": "projects/apps/firebase-chat/tsconfig.app.json",
+            "extractCss": true,
             "aot": true,
             "assets": [
               "projects/apps/firebase-chat/src/favicon.ico",
@@ -136,6 +137,10 @@
               "devServerTarget": "@apps/firebase-chat:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -160,17 +165,23 @@
               "firebase/app",
               "firebase"
             ],
-            "outputPath": "dist/albums",
+            "outputPath": "dist/apps/albums",
             "index": "projects/apps/albums/src/index.html",
             "main": "projects/apps/albums/src/main.ts",
             "polyfills": "projects/apps/albums/src/polyfills.ts",
             "tsConfig": "projects/apps/albums/tsconfig.app.json",
             "aot": true,
+            "extractCss": true,
             "assets": [
               "projects/apps/albums/src/favicon.ico",
               "projects/apps/albums/src/assets"
             ],
             "styles": [
+              {
+                "input": "projects/apps/albums/src/assets/scss/_main.scss",
+                "lazy": true,
+                "bundleName": "main"
+              },
               "projects/apps/albums/src/styles.scss"
             ],
             "scripts": []
@@ -264,6 +275,10 @@
               "devServerTarget": "@apps/albums:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
