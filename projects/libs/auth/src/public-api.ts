@@ -19,8 +19,11 @@ export * from './lib/components/button/twitter/twitter-button.component';
 
 
 /************************************************\
-                   #SERVICES
+                   #PAGES
 \************************************************/
+export * from './lib/pages/access/access.module';
+export * from './lib/pages/access/access.component';
+
 
 
 
