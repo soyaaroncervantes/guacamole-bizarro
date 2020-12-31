@@ -1,9 +1,9 @@
 {
   "targets": {
-    "albums-monorepo": {
+    "guacamole-bizarro": {
       "hosting": {
-        "@apps/website": [
-          "albums-monorepo"
+        "@apps/firebase-chat": [
+          "guacamole-bizarro"
         ]
       }
     }
