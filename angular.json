@@ -21,62 +21,60 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "@firebase/app",
-              "@firebase/firestore",
-              "@firebase/auth",
-              "firebase/app"
-            ],
-            "outputPath": "dist/apps/firebase-chat",
-            "index": "projects/apps/firebase-chat/src/index.html",
-            "main": "projects/apps/firebase-chat/src/main.ts",
-            "polyfills": "projects/apps/firebase-chat/src/polyfills.ts",
-            "tsConfig": "projects/apps/firebase-chat/tsconfig.app.json",
-            "extractCss": true,
-            "aot": true,
-            "assets": [
-              "projects/apps/firebase-chat/src/favicon.ico",
-              "projects/apps/firebase-chat/src/assets"
-            ],
-            "styles": [
-              "node_modules/bootstrap/scss/bootstrap.scss",
-              "projects/apps/firebase-chat/src/styles.scss"
-            ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
-          },
+              "allowedCommonJsDependencies": [
+                "@firebase/app",
+                "@firebase/firestore",
+                "@firebase/auth",
+                "firebase/app"
+              ],
+              "outputPath": "dist/apps/firebase-chat",
+              "index": "projects/apps/firebase-chat/src/index.html",
+              "main": "projects/apps/firebase-chat/src/main.ts",
+              "polyfills": "projects/apps/firebase-chat/src/polyfills.ts",
+              "tsConfig": "projects/apps/firebase-chat/tsconfig.app.json",
+              "aot": true,
+              "assets": [
+                "projects/apps/firebase-chat/src/favicon.ico",
+                "projects/apps/firebase-chat/src/assets"
+              ],
+              "styles": [
+                "node_modules/bootstrap/scss/bootstrap.scss",
+                "projects/apps/firebase-chat/src/styles.scss"
+              ],
+              "scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/popper.js/dist/umd/popper.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              ]
+            },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/apps/firebase-chat/src/environments/environment.ts",
-                  "with": "projects/apps/firebase-chat/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "1mb",
-                  "maximumError": "2mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
+                "fileReplacements": [
+                  {
+                    "replace": "projects/apps/firebase-chat/src/environments/environment.ts",
+                    "with": "projects/apps/firebase-chat/src/environments/environment.prod.ts"
+                  }
+                ],
+                "optimization": true,
+                "outputHashing": "all",
+                "sourceMap": false,
+                "namedChunks": false,
+                "extractLicenses": true,
+                "vendorChunk": false,
+                "buildOptimizer": true,
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "1mb",
+                    "maximumError": "2mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "6kb",
+                    "maximumError": "10kb"
+                  }
+                ]
+              }
           }
         },
         "serve": {
@@ -158,63 +156,61 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "@firebase/app",
-              "@firebase/firestore",
-              "@firebase/auth",
-              "firebase/app",
-              "firebase"
-            ],
-            "outputPath": "dist/apps/albums",
-            "index": "projects/apps/albums/src/index.html",
-            "main": "projects/apps/albums/src/main.ts",
-            "polyfills": "projects/apps/albums/src/polyfills.ts",
-            "tsConfig": "projects/apps/albums/tsconfig.app.json",
-            "aot": true,
-            "extractCss": true,
-            "assets": [
-              "projects/apps/albums/src/favicon.ico",
-              "projects/apps/albums/src/assets"
-            ],
-            "styles": [
-              {
-                "input": "projects/apps/albums/src/assets/scss/_main.scss",
-                "lazy": true,
-                "bundleName": "main"
-              },
-              "projects/apps/albums/src/styles.scss"
-            ],
-            "scripts": []
-          },
+              "allowedCommonJsDependencies": [
+                "@firebase/app",
+                "@firebase/firestore",
+                "@firebase/auth",
+                "firebase/app",
+                "firebase"
+              ],
+              "outputPath": "dist/apps/albums",
+              "index": "projects/apps/albums/src/index.html",
+              "main": "projects/apps/albums/src/main.ts",
+              "polyfills": "projects/apps/albums/src/polyfills.ts",
+              "tsConfig": "projects/apps/albums/tsconfig.app.json",
+              "aot": true,
+              "assets": [
+                "projects/apps/albums/src/favicon.ico",
+                "projects/apps/albums/src/assets"
+              ],
+              "styles": [
+                {
+                  "input": "projects/apps/albums/src/assets/scss/_main.scss",
+                  "bundleName": "main",
+                  "inject": false
+                },
+                "projects/apps/albums/src/styles.scss"
+              ],
+              "scripts": []
+            },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/apps/albums/src/environments/environment.ts",
-                  "with": "projects/apps/albums/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
+                "fileReplacements": [
+                  {
+                    "replace": "projects/apps/albums/src/environments/environment.ts",
+                    "with": "projects/apps/albums/src/environments/environment.prod.ts"
+                  }
+                ],
+                "optimization": true,
+                "outputHashing": "all",
+                "sourceMap": false,
+                "namedChunks": false,
+                "extractLicenses": true,
+                "vendorChunk": false,
+                "buildOptimizer": true,
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "2mb",
+                    "maximumError": "5mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "6kb",
+                    "maximumError": "10kb"
+                  }
+                ]
+              }
           }
         },
         "serve": {
@@ -289,7 +285,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/libs/auth/tsconfig.lib.json",
             "project": "projects/libs/auth/ng-package.json"
@@ -329,7 +325,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/libs/albums/tsconfig.lib.json",
             "project": "projects/libs/albums/ng-package.json"

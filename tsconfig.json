@@ -1,35 +1,29 @@
-/*
-  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
-  It is not intended to be used to perform a compilation.
-
-  To learn more about this file see: https://angular.io/config/solution-tsconfig.
-*/
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./projects/apps/firebase-chat/tsconfig.app.json"
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "module": "es2020",
+    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@libs/auth": [
+        "dist/libs/auth/libs-auth",
+        "dist/libs/auth"
+      ],
+      "@libs/albums": [
+        "dist/libs/albums/libs-albums",
+        "dist/libs/albums"
+      ]
     },
-    {
-      "path": "./projects/apps/firebase-chat/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/libs/auth/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/libs/auth/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/libs/albums/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/libs/albums/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/apps/albums/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/apps/albums/tsconfig.spec.json"
-    }
-]
+    "sourceMap": true,
+    "target": "es2015"
+  }
 }
