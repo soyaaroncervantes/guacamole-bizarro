@@ -73,6 +73,17 @@ export class UserEffects {
     )
   );
 
+
+  loginFacebook$ = createEffect( () =>
+    this.actions$.pipe(
+      ofType( fromAction.loginFacebook ),
+      mergeMap( () => this.signInApiService.signInWithFacebook$ ),
+      mergeMap( () => this.userApiService.user$ ),
+      map( userInfo => fromAction.userSuccess({ userInfo }) ),
+      catchError( errors => of( fromAction.userFailure({ errors }) ) )
+    )
+  );
+
   logout$ = createEffect( () =>
     this.actions$.pipe(
       ofType( fromAction.logout ),
