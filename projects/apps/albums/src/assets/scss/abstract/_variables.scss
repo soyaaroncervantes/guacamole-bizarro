@@ -1,6 +1,8 @@
 @import "~@angular/material/theming";
 @import "projects/apps/albums/src/assets/scss/abstract/colors";
 
+$column-gap: 2em;
+
 $apps-albums-primary: mat-palette( $md-primary-color, 500, 200 );
 $apps-albums-accent: mat-palette( $md-secondary-color, 800, 200, 900 );
 $apps-albums-warn: mat-palette( $md-error );

@@ -1,0 +1,50 @@
+@use "~projects/apps/albums/src/assets/scss/abstract/variables";
+
+@mixin template--grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax( min-content, 120px ) );
+  justify-content: center;
+  align-content: center;
+  column-gap: variables.$column-gap;
+}
+
+@mixin btn--social--media {
+  display: flex;
+  column-gap: 2vw;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 2vw;
+  border: none;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 10px 0 rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  transition: all ease-in-out 125ms;
+
+  &:hover {
+    transform: translateY( -3px );
+    transition: all ease-in 250ms;
+    box-shadow:
+      0 4px 10px 0 rgba(0, 0, 0, 0.2),
+      0 8px 5px 0 rgba(0, 0, 0, 0.12),
+      0 6px 4px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  &:active {
+    transform: translateY( 1px );
+    transition: all ease-in 50ms;
+    box-shadow:
+      0 0 10px 0 rgba(0, 0, 0, 0.2),
+      0 3px 5px 0 rgba(0, 0, 0, 0.12),
+      0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  &--container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+}
