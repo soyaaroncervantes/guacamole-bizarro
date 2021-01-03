@@ -1,11 +1,11 @@
-@import
-  "abstract/colors",
-  "abstract/variables";
+@use "abstract/variables";
+@use "abstract/colors";
+@use "abstract/mixins";
 
-@import "base/base";
+@use "base/base";
 
-@import "layout/grid";
+@use "layout/grid";
 
-@import "components/buttons";
+@use "components/buttons";
 
-@import "themes/albums-theme-light";
+@use "themes/albums-theme-light";

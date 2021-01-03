@@ -1,4 +1,6 @@
-@import '~@angular/material/theming';
-@import '~projects/apps/albums/src/assets/scss/abstract/variables';
+@use  '~@angular/material/theming' as angular-material;
+@use '~projects/apps/albums/src/assets/scss/abstract/variables';
+@use '~projects/apps/albums/src/assets/scss/abstract/typography' as typographies;
 
-@include angular-material-theme( $apps-albums-theme );
+@include angular-material.angular-material-theme( variables.$apps-albums-theme );
+@include angular-material.mat-base-typography( typographies.$guacamole-typography );

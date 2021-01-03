@@ -1,5 +1,7 @@
+@import "~projects/apps/albums/src/assets/scss/abstract/variables";
+
 :host {
   display: flex;
   height: 100vh;
-  margin: 0 24px;
+  margin: 0 $column-gap;
 }
