@@ -1,4 +1,7 @@
+@use "~projects/apps/albums/src/assets/scss/abstract/mixins";
+
 :host {
+  @include mixins.btn--social--media;
   background: rgba(29, 161, 242, 1);
   color: #fff;
 }
