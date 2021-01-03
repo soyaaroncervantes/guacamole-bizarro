@@ -1,14 +1,12 @@
+@use "../../apps/albums/src/assets/scss/abstract/mixins";
+
 :host {
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax( min-content, 120px ) );
-  justify-content: center;
-  align-content: center;
-  column-gap: 2em;
-  row-gap: 5em;
+  @include mixins.template--grid;
+  row-gap: 7em;
   width: 100%;
 }
 
-.mat-h2 {
+.auth--headline {
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
