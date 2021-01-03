@@ -28,4 +28,8 @@ export class SignInApiService {
     return from( this.angularFireAuth.signInWithPopup( new auth.TwitterAuthProvider() ) );
   }
 
+  get signInWithFacebook$(): Observable<UserCredential> {
+    return from( this.angularFireAuth.signInWithPopup( new auth.FacebookAuthProvider() ) );
+  }
+
 }

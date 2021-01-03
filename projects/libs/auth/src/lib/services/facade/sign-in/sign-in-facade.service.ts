@@ -20,6 +20,8 @@ export class SignInFacadeService {
     this.store.dispatch( UserActions.loginTwitter() );
   }
 
-  facebook(): void { }
+  facebook(): void {
+    this.store.dispatch( UserActions.loginFacebook() );
+  }
 
 }
