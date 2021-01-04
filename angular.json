@@ -175,7 +175,7 @@
               ],
               "styles": [
                 {
-                  "input": "projects/apps/albums/src/assets/scss/_main.scss",
+                  "input": "scss/_main.scss",
                   "bundleName": "main",
                   "inject": false
                 },
@@ -328,7 +328,8 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/libs/albums/tsconfig.lib.json",
-            "project": "projects/libs/albums/ng-package.json"
+            "project": "projects/libs/albums/ng-package.json",
+            "styles": [ "scss/_main.scss" ]
           },
           "configurations": {
             "production": {
