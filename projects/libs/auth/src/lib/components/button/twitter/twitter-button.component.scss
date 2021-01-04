@@ -1,7 +1,11 @@
-@use "~projects/apps/albums/src/assets/scss/abstract/mixins";
+@use "assets/scss/components/button" as component;
 
 :host {
-  @include mixins.btn--social--media;
+  @include component.btn--social--media;
   background: rgba(29, 161, 242, 1);
   color: #fff;
+}
+
+.btn--container {
+  @include component.btn--container;
 }

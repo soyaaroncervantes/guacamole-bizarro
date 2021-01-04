@@ -1,0 +1,35 @@
+:host {
+  grid-column: 7 / span 3;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and ( max-width: 1240px ) {
+    grid-column: 5 / span 3;
+  }
+
+  @media only screen and ( max-width: 900px ) {
+    grid-column: 4 / span 2;
+  }
+
+  @media only screen and ( max-width: 768px ) {
+    grid-column: 3 / span 2;
+  }
+
+  @media only screen and ( max-width: 620px ) {
+    grid-column: 1 / -1;
+  }
+
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.btn--submit {
+  display: flex;
+  align-self: center;
+
+}

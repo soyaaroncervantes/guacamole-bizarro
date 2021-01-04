@@ -1,0 +1,18 @@
+<form class="form" #form="ngForm" (ngSubmit)="submit( form )">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email / Username</mat-label>
+    <input matInput placeholder="example@mail.com" type="email" aria-describedby="Your Email or Username" required>
+    <mat-hint>Ex: example@mail.com</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="*************" aria-describedby="Your Password" [type]="hidePassword ? 'password' : 'text'" required>
+    <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{ hidePassword ? "visibility" : "visibility_off" }}</mat-icon>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" color="primary" class="btn--submit">Submit</button>
+
+</form>
+

@@ -1,0 +1,23 @@
+@use "../abstract/variables";
+
+@mixin template--grid {
+  display: grid;
+  grid-template-columns: repeat( 12, minmax( min-content, 120px ) );
+  justify-content: center;
+  align-content: center;
+  column-gap: variables.$column-gap;
+  padding: 0 variables.$column-gap;
+
+  @media only screen and ( max-width: 1240px ) {
+    grid-template-columns: repeat( 8, minmax( min-content, 120px ) );
+  }
+
+  @media only screen and ( max-width: 900px ) {
+    grid-template-columns: repeat( auto-fit, minmax( min-content, 120px ) );
+  }
+
+  @media only screen and ( max-width: 620px ) {
+    grid-template-columns: repeat( auto-fit, minmax( min-content, 120px ) );
+  }
+
+}
