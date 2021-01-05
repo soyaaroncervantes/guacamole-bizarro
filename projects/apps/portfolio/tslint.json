@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "chat",
+      "portfolio",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "chat",
+      "portfolio",
       "kebab-case"
     ]
   }
