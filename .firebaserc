@@ -2,8 +2,11 @@
   "targets": {
     "guacamole-bizarro": {
       "hosting": {
-        "@apps/firebase-chat": [
+        "@apps/portfolio": [
           "guacamole-bizarro"
+        ],
+        "@apps/albums": [
+          "albums-bizarro"
         ]
       }
     }

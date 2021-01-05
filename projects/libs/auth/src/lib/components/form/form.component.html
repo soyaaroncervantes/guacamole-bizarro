@@ -2,13 +2,27 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Email / Username</mat-label>
-    <input matInput placeholder="example@mail.com" type="email" aria-describedby="Your Email or Username" required>
+    <input
+      matInput
+      required
+      ngModel
+      placeholder="example@mail.com"
+      type="email"
+      aria-describedby="Your Email or Username"
+      name="email"/>
     <mat-hint>Ex: example@mail.com</mat-hint>
+    <mat-error *ngIf="form.control.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
-    <input matInput placeholder="*************" aria-describedby="Your Password" [type]="hidePassword ? 'password' : 'text'" required>
+    <input
+      matInput
+      required
+      ngModel
+      placeholder="*************"
+      aria-describedby="Your Password"
+      name="password" [type]="hidePassword ? 'password' : 'text'" />
     <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{ hidePassword ? "visibility" : "visibility_off" }}</mat-icon>
   </mat-form-field>
 

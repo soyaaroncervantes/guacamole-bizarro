@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { SignInFacadeService } from '../../services/facade/sign-in/sign-in-facade.service';
+import { UserInterface } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'auth-form',
@@ -9,12 +11,15 @@ import { NgForm } from '@angular/forms';
 export class FormComponent implements OnInit {
   hidePassword = true;
 
-  constructor() { }
+  constructor(
+    private signInFacadeService: SignInFacadeService
+  ) { }
 
   ngOnInit(): void {}
 
   submit( form: NgForm ): void {
-    console.log( form.value );
+    const { value } = form;
+    console.log( value );
   }
 
 }

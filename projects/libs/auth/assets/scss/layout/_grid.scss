@@ -16,8 +16,4 @@
     grid-template-columns: repeat( auto-fit, minmax( min-content, 120px ) );
   }
 
-  @media only screen and ( max-width: 620px ) {
-    grid-template-columns: repeat( auto-fit, minmax( min-content, 120px ) );
-  }
-
 }

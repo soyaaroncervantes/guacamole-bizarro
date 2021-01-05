@@ -3,16 +3,29 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "portfolio:start": "ng s @apps/portfolio --port 4201",
-    "portfolio:build": "ng b @apps/portfolio --prod --build-optimizer --polyfills --optimization",
-    "portfolio:test": "ng test @apps/portfolio",
-    "portfolio:lint": "ng lint @apps/portfolio",
-    "portfolio:e2e": "ng e2e @apps/portfolio",
-    "albums:start": "ng s @apps/albums --port 4200",
-    "albums:build": "ng b @apps/albums --prod --build-optimizer --polyfills --optimization",
-    "albums:test": "ng test @apps/albums",
-    "albums:lint": "ng lint @apps/albums",
-    "albums:e2e": "ng e2e @apps/albums"
+
+    "apps:portfolio:start": "ng s @apps/portfolio --port 4201",
+    "apps:portfolio:build": "ng b @apps/portfolio --prod --build-optimizer --optimization",
+    "apps:portfolio:test": "ng test @apps/portfolio",
+    "apps:portfolio:lint": "ng lint @apps/portfolio",
+    "apps:portfolio:e2e": "ng e2e @apps/portfolio",
+    "apps:portfolio:deploy": "firebase deploy --only hosting:@apps/portfolio",
+
+    "apps:portfolio:firebase:build": "ng b @apps/portfolio  --prod --watch",
+    "apps:portfolio:firebase:target": "firebase target:apply hosting @apps/portfolio guacamole-bizarro",
+
+    "apps:albums:start": "ng s @apps/albums --port 4200",
+    "apps:albums:build": "ng b @apps/albums --prod --build-optimizer --optimization",
+    "apps:albums:test": "ng test @apps/albums",
+    "apps:albums:lint": "ng lint @apps/albums",
+    "apps:albums:e2e": "ng e2e @apps/albums",
+    "apps:albums:deploy": "firebase deploy --only hosting:@apps/albums",
+
+    "apps:albums:firebase:build": "ng b @apps/albums --prod --watch",
+    "apps:albums:firebase:target": "firebase target:apply hosting @apps/albums albums-bizarro",
+
+    "apps:firebase:serve": "firebase serve"
+
   },
   "private": true,
   "dependencies": {

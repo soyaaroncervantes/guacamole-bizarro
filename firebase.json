@@ -14,7 +14,7 @@
   },
   "hosting": [
     {
-      "target": "albums-dev",
+      "target": "@apps/albums",
       "public": "dist/apps/albums",
       "ignore": [
         "**/.*"
@@ -38,8 +38,8 @@
       ]
     },
     {
-      "target": "@apps/firebase-chat",
-      "public": "dist/apps/firebase-chat",
+      "target": "@apps/portfolio",
+      "public": "dist/apps/portfolio",
       "ignore": [
         "**/.*"
       ],
