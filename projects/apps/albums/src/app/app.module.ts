@@ -8,8 +8,10 @@ import { AppStoreModule } from './app-store.module';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     AuthModule,
     AngularFireModule.initializeApp( environment.firebase ),
+    AngularFireAnalyticsModule,
     AppRoutingModule,
     AppStoreModule,
     BrowserModule,
