@@ -1,17 +1,14 @@
 {
+  "projects": {
+    "default": "guacamole-bizarro"
+  },
   "targets": {
     "guacamole-bizarro": {
       "hosting": {
-        "@apps/portfolio": [
-          "guacamole-bizarro"
-        ],
         "@apps/albums": [
-          "albums-bizarro"
+          "guacamole-bizarro"
         ]
       }
     }
-  },
-  "projects": {
-    "default": "guacamole-bizarro"
   }
 }

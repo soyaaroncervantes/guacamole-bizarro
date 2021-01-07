@@ -1,21 +1,8 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "functions": {
-    "predeploy": [
-      "npm --prefix \"$RESOURCE_DIR\" run lint",
-      "npm --prefix \"$RESOURCE_DIR\" run build"
-    ]
-  },
   "hosting": [
     {
-      "target": "@apps/albums",
-      "public": "dist/apps/albums",
+      "target": "@apps/portfolio",
+      "public": "dist/apps/portfolio",
       "ignore": [
         "**/.*"
       ],
@@ -38,8 +25,8 @@
       ]
     },
     {
-      "target": "@apps/portfolio",
-      "public": "dist/apps/portfolio",
+      "target": "@apps/albums",
+      "public": "dist/apps/albums",
       "ignore": [
         "**/.*"
       ],
@@ -69,26 +56,11 @@
     "auth": {
       "port": 9099
     },
-    "functions": {
-      "port": 5001
-    },
-    "firestore": {
-      "port": 8080
-    },
-    "database": {
-      "port": 9000
-    },
     "hosting": {
       "port": 5000
-    },
-    "pubsub": {
-      "port": 8085
     },
     "ui": {
       "enabled": true
     }
-  },
-  "remoteconfig": {
-    "template": "remoteconfig.template.json"
   }
 }
