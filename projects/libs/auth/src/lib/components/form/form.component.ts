@@ -22,4 +22,8 @@ export class FormComponent implements OnInit {
     console.log( value );
   }
 
+  get errorMessage(): string {
+    return 'An Error';
+  }
+
 }
