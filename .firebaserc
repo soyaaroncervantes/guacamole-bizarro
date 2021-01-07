@@ -6,6 +6,9 @@
     "guacamole-bizarro": {
       "hosting": {
         "@apps/albums": [
+          "albums-bizarro"
+        ],
+        "@apps/portfolio": [
           "guacamole-bizarro"
         ]
       }
