@@ -18,11 +18,11 @@ import { environment } from '../environments/environment';
     AppComponent
   ],
   imports: [
-    AuthModule,
     AngularFireModule.initializeApp( environment.firebase ),
     AngularFireAnalyticsModule,
     AppRoutingModule,
     AppStoreModule,
+    AuthModule,
     BrowserModule,
     BrowserAnimationsModule,
   ],
