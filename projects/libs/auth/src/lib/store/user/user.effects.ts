@@ -6,11 +6,12 @@ import { CreateUserApiService } from '../../services/api/create-user/create-user
 import { SignInApiService } from '../../services/api/sign-in/sign-in-api.service';
 import { SignOutApiService } from '../../services/api/sign-out/sign-out-api.service';
 
+import { getUserInfo } from './user.utilities';
+
 import * as fromAction from './user.actions';
 
-import { catchError, first, map, mergeMap, pluck, tap } from 'rxjs/operators';
+import { catchError, map, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
-import { getUserInfo } from './user.utilities';
 
 @Injectable()
 export class UserEffects {
@@ -45,30 +46,43 @@ export class UserEffects {
   loginGoogle$ = createEffect( () =>
     this.actions$.pipe(
       ofType( fromAction.loginGoogle ),
-      mergeMap( () => this.signInApiService.signInWithGoogle$ ),
-      getUserInfo,
-      map( userInfo => fromAction.userSuccess({ userInfo }) ),
-      catchError( errors => of( fromAction.userFailure({ errors }) ) )
+      mergeMap( () =>
+        this.signInApiService.signInWithGoogle$
+          .pipe(
+            getUserInfo,
+            map( userInfo => fromAction.userSuccess({ userInfo }) ),
+            catchError( errors => of( fromAction.userFailure({ errors }) ) )
+          )
+      ),
     )
   );
 
   loginUser$ = createEffect( () =>
     this.actions$.pipe(
       ofType( fromAction.login ),
-      mergeMap( ({ user }) => this.signInApiService.signInEmailAndPassword$( user )),
-      getUserInfo,
-      map( userInfo => fromAction.userSuccess({ userInfo }) ),
-      catchError( errors => of( fromAction.userFailure({ errors }) ) )
+      switchMap( ({ user }) =>
+        this.signInApiService.fetchSignInMethodsForEmail( user.email )
+          .pipe(
+            tap( console.log ),
+            getUserInfo,
+            map( userInfo => fromAction.userSuccess({ userInfo }) ),
+            catchError( errors => of( fromAction.userFailure({ errors }) ) )
+          )
+      )
     )
   );
 
   loginTwitter$ = createEffect( () =>
     this.actions$.pipe(
       ofType( fromAction.loginTwitter ),
-      mergeMap( () => this.signInApiService.signInWithTwitter$ ),
-      getUserInfo,
-      map( userInfo => fromAction.userSuccess({ userInfo }) ),
-      catchError( errors => of( fromAction.userFailure({ errors }) ) )
+      mergeMap( () =>
+        this.signInApiService.signInWithTwitter$
+          .pipe(
+            getUserInfo,
+            map( userInfo => fromAction.userSuccess({ userInfo }) ),
+            catchError( errors => of( fromAction.userFailure({ errors }) ) )
+          )
+      )
     )
   );
 
@@ -76,10 +90,14 @@ export class UserEffects {
   loginFacebook$ = createEffect( () =>
     this.actions$.pipe(
       ofType( fromAction.loginFacebook ),
-      mergeMap( () => this.signInApiService.signInWithFacebook$ ),
-      getUserInfo,
-      map( userInfo => fromAction.userSuccess({ userInfo }) ),
-      catchError( errors => of( fromAction.userFailure({ errors }) ) )
+      mergeMap( () =>
+        this.signInApiService.signInWithFacebook$
+          .pipe(
+            getUserInfo,
+            map( userInfo => fromAction.userSuccess({ userInfo }) ),
+            catchError( errors => of( fromAction.userFailure({ errors }) ) )
+          )
+      )
     )
   );
 
