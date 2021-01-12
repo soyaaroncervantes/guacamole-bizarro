@@ -1,32 +1,43 @@
-<form class="form" #form="ngForm" (ngSubmit)="submit( form )">
-
+<form class="form" [formGroup]="userForm" (ngSubmit)="submit()" (keydown.enter)="submit()">
   <mat-form-field appearance="outline">
-    <mat-label>Email / Username</mat-label>
+    <mat-label>Email</mat-label>
     <input
       matInput
       required
-      ngModel
       placeholder="example@mail.com"
       type="email"
-      aria-describedby="Your Email or Username"
-      name="email"/>
+      aria-describedby="Write your Email, please!"
+      name="email"
+      formControlName="email"/>
     <mat-hint>Ex: example@mail.com</mat-hint>
-    <mat-error *ngIf="form.control.invalid">{{ errorMessage }}</mat-error>
+
+    <mat-error *ngIf="email.invalid && ( email.dirty || email.touched )">
+      <span *ngIf="email.errors.required">
+        We need an email, 😞😞
+      </span>
+      <span *ngIf="email.errors.email">
+        We need a valid email, 😞😞. Ex: example@mail.com
+      </span>
+    </mat-error>
+
   </mat-form-field>
 
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" *ngIf="showPasswordInput">
     <mat-label>Password</mat-label>
     <input
       matInput
-      required
       ngModel
       placeholder="*************"
       aria-describedby="Your Password"
-      name="password" [type]="hidePassword ? 'password' : 'text'" />
+      name="password"
+      formControlName="password"
+      [required]="showPasswordInput"
+      [type]="hidePassword ? 'password' : 'text'" />
+    <mat-hint>Shhhh...No one will know it</mat-hint>
     <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{ hidePassword ? "visibility" : "visibility_off" }}</mat-icon>
   </mat-form-field>
 
-  <button mat-raised-button type="submit" color="primary" class="btn--submit">Submit</button>
+  <button mat-raised-button type="submit" color="primary" class="btn--submit">Continuar</button>
 
 </form>
 

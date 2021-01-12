@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { SignInFacadeService } from '../../services/facade/sign-in/sign-in-facade.service';
 import { UserInterface } from '../../interfaces/user.interface';
 
@@ -10,6 +10,12 @@ import { UserInterface } from '../../interfaces/user.interface';
 })
 export class FormComponent implements OnInit {
   hidePassword = true;
+  showPasswordInput = false;
+
+  userForm = new FormGroup({
+    email: new FormControl(null, [ Validators.required, Validators.email ]),
+    password: new FormControl(null, [ Validators.minLength(8 ) ])
+  });
 
   constructor(
     private signInFacadeService: SignInFacadeService
@@ -17,13 +23,17 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submit( form: NgForm ): void {
-    const { value } = form;
-    console.log( value );
+  get email(): AbstractControl {
+    return this.userForm.get( 'email' );
   }
 
-  get errorMessage(): string {
-    return 'An Error';
+  get password(): AbstractControl {
+    return this.userForm.get( 'password' );
+  }
+
+  submit(): void {
+    const user: UserInterface = this.userForm.value;
+    this.signInFacadeService.form( user );
   }
 
 }
