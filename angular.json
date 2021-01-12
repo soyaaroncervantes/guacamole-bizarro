@@ -23,8 +23,9 @@
           "options": {
             "allowedCommonJsDependencies": [
               "@firebase/app",
-              "@firebase/firestore",
               "@firebase/auth",
+              "@firebase/util",
+              "@firebase/firestore",
               "firebase/app",
               "firebase"
             ],
