@@ -20,6 +20,10 @@ export class SignInApiService {
     return from( this.angularFireAuth.signInWithEmailAndPassword( user.email, user.password ) );
   }
 
+  fetchSignInMethodsForEmail( email: string ): Observable< Array<string> > {
+    return from( this.angularFireAuth.fetchSignInMethodsForEmail( email ) );
+  }
+
   get signInWithGoogle$(): Observable<UserCredential> {
     return from( this.angularFireAuth.signInWithPopup( new auth.GoogleAuthProvider() ) );
   }
