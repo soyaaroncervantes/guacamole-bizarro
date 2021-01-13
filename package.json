@@ -1,30 +1,4 @@
 {
-  "name": "guacamole-bizarro",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "apps:target": "yarn apps:albums:firebase:target; yarn apps:portfolio:firebase:target",
-    "apps:build": "yarn apps:albums:build; yarn apps:portfolio:build",
-    "apps:deploy": "yarn apps:albums:deploy; yarn apps:portfolio:deploy",
-    "apps:portfolio:start": "ng s @apps/portfolio --port 4201",
-    "apps:portfolio:build": "ng b @apps/portfolio --prod --build-optimizer --optimization",
-    "apps:portfolio:test": "ng test @apps/portfolio",
-    "apps:portfolio:lint": "ng lint @apps/portfolio",
-    "apps:portfolio:e2e": "ng e2e @apps/portfolio",
-    "apps:portfolio:deploy": "firebase deploy --only hosting:@apps/portfolio",
-    "apps:portfolio:firebase:build": "ng b @apps/portfolio  --prod --watch",
-    "apps:portfolio:firebase:target": "firebase target:apply hosting @apps/portfolio guacamole-bizarro",
-    "apps:albums:start": "ng s @apps/albums --port 4200",
-    "apps:albums:build": "ng b @apps/albums --prod --build-optimizer --optimization",
-    "apps:albums:test": "ng test @apps/albums",
-    "apps:albums:lint": "ng lint @apps/albums",
-    "apps:albums:e2e": "ng e2e @apps/albums",
-    "apps:albums:deploy": "firebase deploy --only hosting:@apps/albums",
-    "apps:albums:firebase:build": "ng b @apps/albums --prod --watch",
-    "apps:albums:firebase:target": "firebase target:apply hosting @apps/albums albums-bizarro",
-    "apps:firebase:serve": "firebase serve"
-  },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.8",
     "@angular/cdk": "^11.0.3",
@@ -71,12 +45,16 @@
     "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "^6.0.0",
     "eslint": "^7.6.0",
-    "eslint-plugin-import": "2.22.1",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jasmine": "^4.1.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
+    "eslint-plugin-prettier": "^3.3.1",
     "firebase-tools": "^9.1.0",
     "fuzzy": "^0.1.3",
+    "husky": "^4.3.7",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
     "jasmine-core": "~3.6.0",
@@ -86,11 +64,49 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "lint-staged": "^10.5.3",
     "ng-packagr": "^11.0.3",
     "open": "^7.0.3",
+    "prettier": "^2.2.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.5"
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --relative"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
+  },
+  "name": "guacamole-bizarro",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "apps:target": "yarn apps:albums:firebase:target; yarn apps:portfolio:firebase:target",
+    "apps:build": "yarn apps:albums:build; yarn apps:portfolio:build",
+    "apps:deploy": "yarn apps:albums:deploy; yarn apps:portfolio:deploy",
+    "apps:portfolio:start": "ng s @apps/portfolio --port 4201",
+    "apps:portfolio:build": "ng b @apps/portfolio --prod --build-optimizer --optimization",
+    "apps:portfolio:test": "ng test @apps/portfolio",
+    "apps:portfolio:lint": "ng lint @apps/portfolio",
+    "apps:portfolio:e2e": "ng e2e @apps/portfolio",
+    "apps:portfolio:deploy": "firebase deploy --only hosting:@apps/portfolio",
+    "apps:portfolio:firebase:build": "ng b @apps/portfolio  --prod --watch",
+    "apps:portfolio:firebase:target": "firebase target:apply hosting @apps/portfolio guacamole-bizarro",
+    "apps:albums:start": "ng s @apps/albums --port 4200",
+    "apps:albums:build": "ng b @apps/albums --prod --build-optimizer --optimization",
+    "apps:albums:test": "ng test @apps/albums",
+    "apps:albums:lint": "ng lint @apps/albums",
+    "apps:albums:e2e": "ng e2e @apps/albums",
+    "apps:albums:deploy": "firebase deploy --only hosting:@apps/albums",
+    "apps:albums:firebase:build": "ng b @apps/albums --prod --watch",
+    "apps:albums:firebase:target": "firebase target:apply hosting @apps/albums albums-bizarro",
+    "apps:firebase:serve": "firebase serve"
+  },
+  "version": "0.0.0"
 }
