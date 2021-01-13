@@ -6,12 +6,13 @@ describe('FacebookButtonComponent', () => {
   let component: FacebookButtonComponent;
   let fixture: ComponentFixture<FacebookButtonComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FacebookButtonComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [FacebookButtonComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FacebookButtonComponent);

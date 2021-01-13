@@ -25,7 +25,9 @@
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
       ],
-      "rules": {}
+      "rules": {
+        "import/prefer-default-export": 0
+      }
     },
     {
       "files": ["projects/**/**/*.spec.ts", "projects/**/*.d.ts"],

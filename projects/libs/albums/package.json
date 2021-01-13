@@ -10,8 +10,8 @@
   },
   "scripts": {
     "build": "ng b @libs/albums",
-    "watch": "ng b @libs/albums --watch",
     "lint": "ng lint @libs/albums",
-    "test": "ng test @libs/albums"
+    "test": "ng test @libs/albums",
+    "watch": "ng b @libs/albums --watch"
   }
 }

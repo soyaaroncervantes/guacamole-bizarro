@@ -13,10 +13,7 @@ import { SignOutFacadeService } from './services/facade/sign-out/sign-out-facade
 import { UserFacadeService } from './services/facade/user/user-facade.service';
 
 @NgModule({
-  imports: [
-    AuthStoreModule,
-    AuthComponentModule,
-  ],
+  imports: [AuthStoreModule, AuthComponentModule],
   providers: [
     CreateUserApiService,
     CreateUserFacadeService,
@@ -27,9 +24,6 @@ import { UserFacadeService } from './services/facade/user/user-facade.service';
     UserApiService,
     UserFacadeService,
   ],
-  exports: [
-    AuthStoreModule,
-    AuthComponentModule
-  ]
+  exports: [AuthStoreModule, AuthComponentModule],
 })
-export class AuthModule { }
+export class AuthModule {}

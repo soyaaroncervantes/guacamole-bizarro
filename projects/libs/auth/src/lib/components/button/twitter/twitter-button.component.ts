@@ -1,21 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SignInFacadeService } from '../../../services/facade/sign-in/sign-in-facade.service';
 
 @Component({
   selector: 'auth-twitter-button',
   templateUrl: './twitter-button.component.html',
-  styleUrls: ['./twitter-button.component.scss']
+  styleUrls: ['./twitter-button.component.scss'],
 })
-export class TwitterButtonComponent implements OnInit {
-
-  constructor(
-    private signInFacadeService: SignInFacadeService
-  ) { }
-
-  ngOnInit(): void { }
+export class TwitterButtonComponent {
+  constructor(private signInFacadeService: SignInFacadeService) {}
 
   signIn(): void {
     this.signInFacadeService.twitter();
   }
-
 }

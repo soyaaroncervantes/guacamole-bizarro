@@ -1,39 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SignInFacadeService } from '../../services/facade/sign-in/sign-in-facade.service';
 import { UserInterface } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'auth-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
   hidePassword = true;
+
   showPasswordInput = false;
 
   userForm = new FormGroup({
-    email: new FormControl(null, [ Validators.required, Validators.email ]),
-    password: new FormControl(null, [ Validators.minLength(8 ) ])
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    password: new FormControl(null, [Validators.minLength(8)]),
   });
 
-  constructor(
-    private signInFacadeService: SignInFacadeService
-  ) { }
-
-  ngOnInit(): void {}
+  constructor(private signInFacadeService: SignInFacadeService) {}
 
   get email(): AbstractControl {
-    return this.userForm.get( 'email' );
+    return this.userForm.get('email');
   }
 
   get password(): AbstractControl {
-    return this.userForm.get( 'password' );
+    return this.userForm.get('password');
   }
 
   submit(): void {
     const user: UserInterface = this.userForm.value;
-    this.signInFacadeService.form( user );
+    this.signInFacadeService.form(user);
   }
-
 }

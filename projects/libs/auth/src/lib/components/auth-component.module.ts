@@ -12,14 +12,12 @@ import { TwitterButtonComponent } from './button/twitter/twitter-button.componen
 import { FacebookButtonComponent } from './button/facebook/facebook-button.component';
 import { FormComponent } from './form/form.component';
 
-
-
 @NgModule({
   declarations: [
     GoogleButtonComponent,
     TwitterButtonComponent,
     FacebookButtonComponent,
-    FormComponent
+    FormComponent,
   ],
   imports: [
     CommonModule,
@@ -28,13 +26,8 @@ import { FormComponent } from './form/form.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  exports: [
-    GoogleButtonComponent,
-    TwitterButtonComponent,
-    FacebookButtonComponent,
-    FormComponent
-  ]
+  exports: [GoogleButtonComponent, TwitterButtonComponent, FacebookButtonComponent, FormComponent],
 })
-export class AuthComponentModule { }
+export class AuthComponentModule {}

@@ -3,15 +3,21 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
-    "@angular/core": "^10.0.14"
+    "@angular/core": "^10.0.14",
+    "@angular/forms": "~11.0.8",
+    "@angular/material": "^11.0.3",
+    "@firebase/auth-types": "^0.10.1",
+    "@ngrx/store": "^10.1.2",
+    "rxjs": "~6.6.3",
+    "zone.js": "~0.10.3"
   },
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "scripts": {
     "build": "ng build @libs/auth",
-    "watch": "ng build @libs/auth --watch",
+    "lint": "ng lint @libs/auth",
     "test": "ng test @libs/auth",
-    "lint": "ng lint @libs/auth"
+    "watch": "ng build @libs/auth --watch"
   }
 }

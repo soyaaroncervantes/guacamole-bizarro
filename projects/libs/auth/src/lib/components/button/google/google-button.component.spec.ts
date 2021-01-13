@@ -6,12 +6,13 @@ describe('GoogleButtonComponent', () => {
   let component: GoogleButtonComponent;
   let fixture: ComponentFixture<GoogleButtonComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ GoogleButtonComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [GoogleButtonComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(GoogleButtonComponent);
