@@ -287,14 +287,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/libs/auth/tsconfig.lib.json",
-              "projects/libs/auth/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/libs/auth/**/*.ts",
+              "projects/libs/auth/**/*.html"
             ]
           }
         }
@@ -330,14 +327,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/libs/albums/tsconfig.lib.json",
-              "projects/libs/albums/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/libs/albums/**/*.ts",
+              "projects/libs/albums/**/*.html"
             ]
           }
         }
