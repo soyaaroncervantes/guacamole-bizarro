@@ -5,11 +5,11 @@
   "targets": {
     "guacamole-bizarro": {
       "hosting": {
-        "@apps/albums": [
-          "albums-bizarro"
-        ],
         "@apps/portfolio": [
           "guacamole-bizarro"
+        ],
+        "@apps/albums": [
+          "albums-bizarro"
         ]
       }
     }
