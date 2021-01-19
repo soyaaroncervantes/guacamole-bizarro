@@ -3,22 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AuthModule } from '@libs/auth';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppStoreModule } from './app-store.module';
-
-import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AppRoutingModule } from './app-routing.module';
+import { AppStoreModule } from './store/app-store.module';
+
+import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    AngularFireModule.initializeApp( environment.firebase ),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AppRoutingModule,
     AppStoreModule,
@@ -27,6 +25,6 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
