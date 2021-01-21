@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AuthModule } from '@libs/auth';
+import { AlbumsLibModule } from '@libs/albums';
 
 import { AngularFireModule } from '@angular/fire';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +22,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     AppStoreModule,
     AuthModule,
+    AlbumsLibModule,
     BrowserModule,
     BrowserAnimationsModule,
   ],
