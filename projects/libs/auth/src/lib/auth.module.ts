@@ -24,6 +24,5 @@ import { UserFacadeService } from './services/facade/user/user-facade.service';
     UserApiService,
     UserFacadeService,
   ],
-  exports: [AuthStoreModule, AuthComponentModule],
 })
 export class AuthModule {}
