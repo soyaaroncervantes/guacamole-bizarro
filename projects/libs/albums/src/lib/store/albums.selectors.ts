@@ -1,8 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { albumsFeatureKey, State } from './albums.reducer';
+import { albumsFeatureKey, AlbumsState } from './albums.reducer';
 
+const featureAlbumSelector = createFeatureSelector<AlbumsState>(albumsFeatureKey);
 
-const featureAlbumSelector = createFeatureSelector<State>(albumsFeatureKey);
-
-export const getAlbumData = createSelector( featureAlbumSelector, state => state.album );
-export const getAlbumsData = createSelector( featureAlbumSelector, state => state.albums );
+export const getAlbumData = createSelector(featureAlbumSelector, (state) => state.album);
+export const getAlbumsData = createSelector(featureAlbumSelector, (state) => state.albums);

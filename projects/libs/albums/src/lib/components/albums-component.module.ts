@@ -5,22 +5,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
 import { CardComponent } from './card/card.component';
-import { RollingSvgComponentComponent } from './svg/rolling/rolling-svg-component.component';
-
 
 @NgModule({
-  declarations: [
-    CardComponent,
-    RollingSvgComponentComponent
-  ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-  ],
-  exports: [
-    CardComponent,
-    RollingSvgComponentComponent
-  ]
+  declarations: [CardComponent],
+  imports: [CommonModule, MatCardModule, MatButtonModule],
+  exports: [CardComponent],
 })
-export class AlbumsComponentModule { }
+export class AlbumsComponentModule {}

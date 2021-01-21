@@ -1,39 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { UserInfo } from '@firebase/auth-types';
+import { Observable } from 'rxjs';
+import { UserFacadeService } from '@libs/auth';
 import { Album } from '../../interfaces/album.interface';
 
-import { FacadeUserService } from '@libs/auth';
 import { AlbumsFacadeService } from '../../services/facade/albums/albums-facade.service';
-
-import { Observable } from 'rxjs';
-import { NotificationsFacadeService } from '../../services/facade/notifications/notifications-facade.service';
 
 @Component({
   selector: 'lib-albums',
   templateUrl: './albums.component.html',
-  styleUrls: ['./albums.component.scss']
+  styleUrls: ['./albums.component.scss'],
 })
 export class AlbumsComponent implements OnInit {
-
   albums$: Observable<Album[]>;
+
   user$: Observable<UserInfo>;
 
   constructor(
     private albumsFacadeService: AlbumsFacadeService,
-    private facadeUserService: FacadeUserService,
-    private notificationsFacadeService: NotificationsFacadeService,
+    private userFacadeService: UserFacadeService,
   ) {
     this.albums$ = albumsFacadeService.albums$;
-    this.user$ = facadeUserService.info;
+    this.user$ = userFacadeService.user$;
   }
 
   ngOnInit(): void {
     this.albumsFacadeService.loadAlbums();
-    this.facadeUserService.dispatchUser();
+    this.userFacadeService.user();
   }
-
-  addAlbum(): void {
-    this.notificationsFacadeService.addAlbum();
-  }
-
 }
