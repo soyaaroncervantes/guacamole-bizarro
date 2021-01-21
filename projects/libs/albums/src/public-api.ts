@@ -1,43 +1,20 @@
-/************************************************\
-                     #MODULE
-\************************************************/
+/** #MODULE */
 export * from './lib/albums-lib.module';
 export * from './lib/routes/albums/albums.module';
 export * from './lib/routes/home/home.module';
-
-
-
-/************************************************\
-                    #ROUTES
-\************************************************/
+/** #ROUTES */
 export * from './lib/routes/albums/albums-routing.module';
 export * from './lib/routes/home/home-routing.module';
-
-
-
-/************************************************\
-                   #COMPONENTS
-\************************************************/
+/** #COMPONENTS */
 export * from './lib/routes/albums/albums.component';
 export * from './lib/routes/home/home.component';
-
-
-
-/************************************************\
-                 #FACADE-SERVICES
-\************************************************/
+/** #FACADE */
 export * from './lib/services/facade/albums/albums-facade.service';
-
-
-
-/************************************************\
-                      #CONST
-\************************************************/
+/** #CONST */
 export * from './lib/const/website-routes.const';
-
-
-
-/************************************************\
-                    #INTERFACES
-\************************************************/
+/** #INTERFACES */
 export * from './lib/interfaces/album.interface';
+/** #STORE */
+export * from './lib/store/albums-store.module';
+/** #REDUCER */
+export * from './lib/store/albums.reducer';
