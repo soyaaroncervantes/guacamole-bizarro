@@ -307,10 +307,7 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/libs/albums/tsconfig.lib.json",
-            "project": "projects/libs/albums/ng-package.json",
-            "styles": [
-              "scss/_main.scss"
-            ]
+            "project": "projects/libs/albums/ng-package.json"
           },
           "configurations": {
             "production": {
@@ -338,5 +335,5 @@
       }
     }
   },
-  "defaultProject": "@apps/firebase-chat"
+  "defaultProject": "@apps/albums"
 }
