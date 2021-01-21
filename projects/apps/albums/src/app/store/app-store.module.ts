@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
+
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { AuthStoreModule } from '@libs/auth';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 import { environment } from '../../environments/environment';
+import { metaReducers, appReducers } from './reducers';
+import { StoreDevToolsConfig } from './store-devtools.config';
 
 @NgModule({
   imports: [
-    StoreModule.forRoot({}),
+    StoreModule.forRoot(appReducers, { metaReducers }),
     EffectsModule.forRoot(),
-    AuthStoreModule,
-    StoreDevtoolsModule.instrument({
-      maxAge: 25, // Retains last 25 states
-      logOnly: environment.production, // Restrict extension to log-only mode
-    }),
+    !environment.production ? StoreDevtoolsModule.instrument(StoreDevToolsConfig) : [],
   ],
 })
 export class AppStoreModule {}
