@@ -25,4 +25,4 @@ import { UserFacadeService } from './services/facade/user/user-facade.service';
     UserFacadeService,
   ],
 })
-export class AuthModule {}
+export class AuthLibModule {}
