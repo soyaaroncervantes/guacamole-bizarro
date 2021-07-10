@@ -19,9 +19,7 @@
         "plugin:@angular-eslint/ng-cli-compat",
         "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
         "plugin:@angular-eslint/template/process-inline-templates",
-        // AirBnB Styleguide rules
         "airbnb-typescript/base",
-        // Settings for Prettier
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
       ],
@@ -32,16 +30,22 @@
       }
     },
     {
-      "files": ["projects/**/**/*.spec.ts", "projects/**/*.d.ts"],
+      "files": [
+        "projects/**/**/*.spec.ts",
+        "projects/**/*.d.ts"
+      ],
       "parserOptions": {
         "project": "projects/**/**src/tsconfig.spec.json"
       },
-      // Jasmine rules
-      "extends": ["plugin:jasmine/recommended"],
-      // Plugin to run Jasmine rules
-      "plugins": ["jasmine"],
-      "env": { "jasmine": true },
-      // Turn off "no-unused-vars" rule
+      "extends": [
+        "plugin:jasmine/recommended"
+      ],
+      "plugins": [
+        "jasmine"
+      ],
+      "env": {
+        "jasmine": true
+      },
       "rules": {
         "@typescript-eslint/no-unused-vars": "off"
       }
