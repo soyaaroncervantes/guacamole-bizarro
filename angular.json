@@ -34,7 +34,6 @@
             "main": "projects/apps/albums/src/main.ts",
             "polyfills": "projects/apps/albums/src/polyfills.ts",
             "tsConfig": "projects/apps/albums/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/apps/albums/src/favicon.ico",
               "projects/apps/albums/src/assets"
@@ -47,7 +46,13 @@
               },
               "projects/apps/albums/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "buildOptimizer": false,
+              "sourceMap": true,
+              "optimization": false,
+              "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -77,7 +82,8 @@
                 }
               ]
             }
-          }
+          },
+            "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -159,7 +165,6 @@
             "main": "projects/apps/portfolio/src/main.ts",
             "polyfills": "projects/apps/portfolio/src/polyfills.ts",
             "tsConfig": "projects/apps/portfolio/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/apps/portfolio/src/favicon.ico",
               "projects/apps/portfolio/src/assets"
@@ -167,7 +172,13 @@
             "styles": [
               "projects/apps/portfolio/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "buildOptimizer": false,
+              "sourceMap": true,
+              "optimization": false,
+              "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -197,7 +208,8 @@
                 }
               ]
             }
-          }
+          },
+            "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
