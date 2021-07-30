@@ -3,7 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('@libs/albums').then((albums) => albums.HomeModule) },
-  { path: 'login', loadChildren: () => import('@libs/auth').then((auth) => auth.LoginModule) },
+  {
+    path: 'login',
+    loadChildren: () => import('@libs/auth').then(({ LoginModule }) => LoginModule),
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
