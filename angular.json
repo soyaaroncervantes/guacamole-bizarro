@@ -160,6 +160,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "@firebase/app",
+              "@firebase/auth",
+              "@firebase/util",
+              "@firebase/firestore",
+              "@firebase/component",
+              "firebase/app",
+              "firebase"
+            ],
             "outputPath": "dist/apps/portfolio",
             "index": "projects/apps/portfolio/src/index.html",
             "main": "projects/apps/portfolio/src/main.ts",
@@ -170,7 +179,8 @@
               "projects/apps/portfolio/src/assets"
             ],
             "styles": [
-              "projects/apps/portfolio/src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+                "projects/apps/portfolio/src/styles.scss"
             ],
             "scripts": [],
               "vendorChunk": true,
@@ -240,7 +250,8 @@
               "projects/apps/portfolio/src/assets"
             ],
             "styles": [
-              "projects/apps/portfolio/src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+                "projects/apps/portfolio/src/styles.scss"
             ],
             "scripts": []
           }
